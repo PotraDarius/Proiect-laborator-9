@@ -1,0 +1,106 @@
+        -:    0:Source:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/undo.h
+        -:    0:Graph:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/service.cpp.gcno
+        -:    0:Data:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "repository.h"
+        -:    3:
+        -:    4:
+        -:    5:class ActiuneUndo{
+        -:    6:public:
+        -:    7:    virtual void doUndo() = 0;
+      43*:    8:    virtual ~ActiuneUndo() = default;
+------------------
+_ZN11ActiuneUndoD0Ev:
+function _ZN11ActiuneUndoD0Ev called 0 returned 0% blocks executed 0%
+    #####:    8:    virtual ~ActiuneUndo() = default;
+    %%%%%:    8-block  0
+call    0 never executed
+call    1 never executed
+------------------
+_ZN11ActiuneUndoD2Ev:
+function _ZN11ActiuneUndoD2Ev called 43 returned 100% blocks executed 100%
+       43:    8:    virtual ~ActiuneUndo() = default;
+------------------
+        -:    9:};
+        -:   10:
+        -:   11:class UndoAdauga: public ActiuneUndo{
+        -:   12:private:
+        -:   13:    Oferta oferta_adaugata;
+        -:   14:    RepoGeneric & repo;
+        -:   15:public:
+function _ZN10UndoAdaugaC2ER11RepoGenericRK6Oferta called 39 returned 100% blocks executed 80%
+       39:   16:    UndoAdauga(RepoGeneric & repo, const Oferta& of): repo{repo}, oferta_adaugata{of}{}
+       39:   16-block  0
+call    0 returned 39
+call    1 returned 39
+branch  2 taken 39 (fallthrough)
+branch  3 taken 0 (throw)
+       39:   16-block  1
+    $$$$$:   16-block  2
+call    4 never executed
+        -:   17:
+function _ZN10UndoAdauga6doUndoEv called 1 returned 100% blocks executed 100%
+        1:   18:    void doUndo() override{
+        1:   19:        repo.del_oferta(oferta_adaugata.get_id());
+        1:   19-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   19-block  1
+call    4 returned 1
+        1:   20:    }
+        -:   21:};
+        -:   22:
+        -:   23:
+        -:   24:class UndoSterge: public ActiuneUndo{
+        -:   25:private:
+        -:   26:    Oferta oferta_stearsa;
+        -:   27:    RepoGeneric & repo;
+        -:   28:public:
+function _ZN10UndoStergeC2ER11RepoGenericRK6Oferta called 2 returned 100% blocks executed 80%
+        2:   29:    UndoSterge(RepoGeneric & repo, const Oferta& of): repo{repo}, oferta_stearsa{of} {}
+        2:   29-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   29-block  1
+    $$$$$:   29-block  2
+call    4 never executed
+        -:   30:
+function _ZN10UndoSterge6doUndoEv called 1 returned 100% blocks executed 100%
+        1:   31:    void doUndo() override{
+        1:   32:        repo.store_oferta(oferta_stearsa);
+        1:   32-block  0
+call    0 returned 1
+        1:   33:    }
+        -:   34:};
+        -:   35:
+        -:   36:class UndoModifica: public ActiuneUndo{
+        -:   37:private:
+        -:   38:    int id;
+        -:   39:    Oferta oferta_modificata;
+        -:   40:    RepoGeneric & repo;
+        -:   41:public:
+function _ZN12UndoModificaC2ER11RepoGenericRK6OfertaRKi called 2 returned 100% blocks executed 80%
+        4:   42:    UndoModifica(RepoGeneric & repo, const Oferta& of, const int& id): repo{repo},
+        2:   43:    oferta_modificata{of}, id{id}{}
+        2:   43-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        2:   43-block  1
+    $$$$$:   43-block  2
+call    4 never executed
+        -:   44:
+function _ZN12UndoModifica6doUndoEv called 1 returned 100% blocks executed 100%
+        1:   45:    void doUndo() override{
+        1:   46:        repo.modificare_oferta(id, oferta_modificata);
+        1:   46-block  0
+call    0 returned 1
+call    1 returned 1
+        1:   47:    }
+        -:   48:};

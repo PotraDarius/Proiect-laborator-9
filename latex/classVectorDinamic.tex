@@ -1,0 +1,242 @@
+\hypertarget{classVectorDinamic}{}\doxysection{Vector\+Dinamic$<$ Elem\+Type $>$ Class Template Reference}
+\label{classVectorDinamic}\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+
+
+{\ttfamily \#include $<$vector\+\_\+dinamic.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classVectorDinamic_ae78ccec31750f5155669ca3a00d73ece}{Vector\+Dinamic}} ()
+\begin{DoxyCompactList}\small\item\em Vector dinamic functions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classVectorDinamic_acea5ed34f67bedfe1c21f5f7f18922b0}{Vector\+Dinamic}} (const \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} \&ot)
+\item 
+\mbox{\hyperlink{classVectorDinamic_a554c5f7c40941fd2deb8de45fd4ec91d}{$\sim$\+Vector\+Dinamic}} ()
+\item 
+\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} \& \mbox{\hyperlink{classVectorDinamic_a1ed1bea16059424e14baed9a44ac1ca6}{operator=}} (const \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} \&ot)
+\item 
+\mbox{\hyperlink{classVectorDinamic_acb26a09b64381331288a4f93f14bd7cb}{Vector\+Dinamic}} (\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} \&\&ot) noexcept
+\item 
+\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} \& \mbox{\hyperlink{classVectorDinamic_a87da6d830d4ec11681bb022a806d130b}{operator=}} (\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} \&\&ot) noexcept
+\item 
+void \mbox{\hyperlink{classVectorDinamic_a304e2ec3743588d8f986e70248db3b3e}{erase}} (int poz)
+\item 
+void \mbox{\hyperlink{classVectorDinamic_a31551f07ccb1ea90bfc743d2356fdd4a}{push\+\_\+back}} (const Elem\+Type \&of)
+\item 
+void \mbox{\hyperlink{classVectorDinamic_a059ec02db27e2a6edd857e9cde409d3a}{set}} (int poz, const Elem\+Type \&of)
+\item 
+void \mbox{\hyperlink{classVectorDinamic_a66f60fcb440fc8eaca66b0ba7d7de086}{swap}} (int poz1, int poz2)
+\item 
+Elem\+Type \& \mbox{\hyperlink{classVectorDinamic_ad5d81161e59c893634b954804992bacb}{get}} (int poz) const
+\item 
+int \mbox{\hyperlink{classVectorDinamic_a0a75bbe2c8bac80ad0c00af43d7948b2}{size}} () const noexcept
+\item 
+int \mbox{\hyperlink{classVectorDinamic_a07beaaac405bcff43c13658aa4b2b9ad}{capacity}} () const noexcept
+\item 
+bool \mbox{\hyperlink{classVectorDinamic_a864cf1923c7212615f4091fa96a02176}{empty}} () const noexcept
+\item 
+\mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$ \mbox{\hyperlink{classVectorDinamic_a21461099a5e349ddd5e3569cb9509533}{begin}} ()
+\item 
+\mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$ \mbox{\hyperlink{classVectorDinamic_a7c0ed7a7800e8c3e697be5456b69e69a}{end}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classVectorDinamic_ae5a1d0b0f7f89542576fbbbb67f790b6}{Iterator$<$ Elem\+Type $>$}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVectorDinamic_ae78ccec31750f5155669ca3a00d73ece}\label{classVectorDinamic_ae78ccec31750f5155669ca3a00d73ece}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!VectorDinamic@{VectorDinamic}}
+\index{VectorDinamic@{VectorDinamic}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{VectorDinamic()}{VectorDinamic()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$\+::\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}}
+
+
+
+Vector dinamic functions. 
+
+Constructor pentru clasa \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} \mbox{\Hypertarget{classVectorDinamic_acea5ed34f67bedfe1c21f5f7f18922b0}\label{classVectorDinamic_acea5ed34f67bedfe1c21f5f7f18922b0}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!VectorDinamic@{VectorDinamic}}
+\index{VectorDinamic@{VectorDinamic}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{VectorDinamic()}{VectorDinamic()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$\+::\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$ \&}]{ot }\end{DoxyParamCaption})}
+
+Constructor de copiere pentru clasa \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} 
+\begin{DoxyParams}{Parameters}
+{\em ot} & -\/ \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classVectorDinamic_a554c5f7c40941fd2deb8de45fd4ec91d}\label{classVectorDinamic_a554c5f7c40941fd2deb8de45fd4ec91d}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!````~VectorDinamic@{$\sim$VectorDinamic}}
+\index{````~VectorDinamic@{$\sim$VectorDinamic}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$VectorDinamic()}{~VectorDinamic()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$\+::$\sim$\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}}
+
+Destructor pentru clasa \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} \mbox{\Hypertarget{classVectorDinamic_acb26a09b64381331288a4f93f14bd7cb}\label{classVectorDinamic_acb26a09b64381331288a4f93f14bd7cb}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!VectorDinamic@{VectorDinamic}}
+\index{VectorDinamic@{VectorDinamic}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{VectorDinamic()}{VectorDinamic()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$\+::\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$ \&\&}]{ot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+Constructor de mutare pentru clasa \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} ot -\/ \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVectorDinamic_a21461099a5e349ddd5e3569cb9509533}\label{classVectorDinamic_a21461099a5e349ddd5e3569cb9509533}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!begin@{begin}}
+\index{begin@{begin}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+\mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$ \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$\+::begin}
+
+Functie care returneaza un iterator la inceputul vectorului \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classIterator}{Iterator}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVectorDinamic_a07beaaac405bcff43c13658aa4b2b9ad}\label{classVectorDinamic_a07beaaac405bcff43c13658aa4b2b9ad}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!capacity@{capacity}}
+\index{capacity@{capacity}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+int \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$\+::capacity\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+Functie care returneaza capacitatea vectorului \begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classVectorDinamic_a07beaaac405bcff43c13658aa4b2b9ad_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classVectorDinamic_a864cf1923c7212615f4091fa96a02176}\label{classVectorDinamic_a864cf1923c7212615f4091fa96a02176}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!empty@{empty}}
+\index{empty@{empty}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+bool \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$\+::empty\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+Functie care verifica daca vectorul este gol \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVectorDinamic_a7c0ed7a7800e8c3e697be5456b69e69a}\label{classVectorDinamic_a7c0ed7a7800e8c3e697be5456b69e69a}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!end@{end}}
+\index{end@{end}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+\mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$ \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$\+::end}
+
+Functie care returneaza un iterator la sfarsitul vectorului \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classIterator}{Iterator}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVectorDinamic_a304e2ec3743588d8f986e70248db3b3e}\label{classVectorDinamic_a304e2ec3743588d8f986e70248db3b3e}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!erase@{erase}}
+\index{erase@{erase}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+void \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$\+::erase (\begin{DoxyParamCaption}\item[{int}]{poz }\end{DoxyParamCaption})}
+
+Functie care sterge elementul de pe pozitia poz poz -\/ int Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classVectorDinamic_a304e2ec3743588d8f986e70248db3b3e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classVectorDinamic_ad5d81161e59c893634b954804992bacb}\label{classVectorDinamic_ad5d81161e59c893634b954804992bacb}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!get@{get}}
+\index{get@{get}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+Elem\+Type \& \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$\+::get (\begin{DoxyParamCaption}\item[{int}]{poz }\end{DoxyParamCaption}) const}
+
+Functie care returneaza elementul de pe pozitia poz poz -\/ int \begin{DoxyReturn}{Returns}
+Elem\+Type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVectorDinamic_a1ed1bea16059424e14baed9a44ac1ca6}\label{classVectorDinamic_a1ed1bea16059424e14baed9a44ac1ca6}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$ \& \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$ \&}]{ot }\end{DoxyParamCaption})}
+
+Operator de atribuire pentru clasa \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} ot -\/ \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVectorDinamic_a87da6d830d4ec11681bb022a806d130b}\label{classVectorDinamic_a87da6d830d4ec11681bb022a806d130b}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$ \& \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$ \&\&}]{ot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+Operator de mutare pentru clasa \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} ot -\/ \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classVectorDinamic_a31551f07ccb1ea90bfc743d2356fdd4a}\label{classVectorDinamic_a31551f07ccb1ea90bfc743d2356fdd4a}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+void \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{const Elem\+Type \&}]{of }\end{DoxyParamCaption})}
+
+Functie care adauga un element la sfarsitul vectorului of -\/ Elem\+Type Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classVectorDinamic_a31551f07ccb1ea90bfc743d2356fdd4a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classVectorDinamic_a059ec02db27e2a6edd857e9cde409d3a}\label{classVectorDinamic_a059ec02db27e2a6edd857e9cde409d3a}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!set@{set}}
+\index{set@{set}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+void \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$\+::set (\begin{DoxyParamCaption}\item[{int}]{poz,  }\item[{const Elem\+Type \&}]{of }\end{DoxyParamCaption})}
+
+Functie care seteaza elementul de pe pozitia poz cu of poz -\/ int of -\/ Elem\+Type \mbox{\Hypertarget{classVectorDinamic_a0a75bbe2c8bac80ad0c00af43d7948b2}\label{classVectorDinamic_a0a75bbe2c8bac80ad0c00af43d7948b2}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!size@{size}}
+\index{size@{size}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+int \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$\+::size\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+Functie care returneaza numarul de elemente din vector \begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classVectorDinamic_a0a75bbe2c8bac80ad0c00af43d7948b2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classVectorDinamic_a66f60fcb440fc8eaca66b0ba7d7de086}\label{classVectorDinamic_a66f60fcb440fc8eaca66b0ba7d7de086}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!swap@{swap}}
+\index{swap@{swap}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+void \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$\+::swap (\begin{DoxyParamCaption}\item[{int}]{poz1,  }\item[{int}]{poz2 }\end{DoxyParamCaption})}
+
+Functie care interschimba elementele de pe pozitiile poz1 si poz2 poz1 -\/ int poz2 -\/ int 
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classVectorDinamic_ae5a1d0b0f7f89542576fbbbb67f790b6}\label{classVectorDinamic_ae5a1d0b0f7f89542576fbbbb67f790b6}} 
+\index{VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}!Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}}
+\index{Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}!VectorDinamic$<$ ElemType $>$@{VectorDinamic$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{Iterator$<$ ElemType $>$}{Iterator< ElemType >}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+friend class \mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vector__dinamic_8h}{vector\+\_\+dinamic.\+h}}\end{DoxyCompactItemize}

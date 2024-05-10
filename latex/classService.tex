@@ -1,0 +1,479 @@
+\hypertarget{classService}{}\doxysection{Service Class Reference}
+\label{classService}\index{Service@{Service}}
+
+
+{\ttfamily \#include $<$service.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classService_ac85c62879e84c16052fa688b779ad379}{Service}} ()=default
+\item 
+void \mbox{\hyperlink{classService_ad7786df86b71695cd1a15f279b7d6cee}{add\+\_\+oferta}} (const int \&id, const string \&denum, const string \&dest, const string \&tip, const int \&pret)
+\item 
+void \mbox{\hyperlink{classService_a02333167f996d434396b4fb9a2bd6d1d}{delete\+\_\+oferta}} (const int \&id)
+\item 
+void \mbox{\hyperlink{classService_a93dc9abb51301da85d8d41d0a914a9f6}{update\+\_\+oferta}} (const int \&id, const string \&denumire, const string \&dest, const string \&tip, const int \&pret)
+\item 
+vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ \mbox{\hyperlink{classService_a7fd8c11c03d5b4914792a382ad0319e3}{filtrare\+\_\+oferte\+\_\+dupa\+\_\+destinatie}} (const string \&dest)
+\item 
+vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ \mbox{\hyperlink{classService_afbdd5805cc628edeccbe9bf5952b448a}{filtrare\+\_\+oferte\+\_\+dupa\+\_\+pret}} (const int \&pret)
+\item 
+vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ \mbox{\hyperlink{classService_a321299ee3c3e78bb5828f5b9e016b6a7}{sort\+\_\+generic}} (bool($\ast$conditie)(const \mbox{\hyperlink{classOferta}{Oferta}} \&, const \mbox{\hyperlink{classOferta}{Oferta}} \&))
+\item 
+vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ \mbox{\hyperlink{classService_ac0b9a89d0fd90717cd422b641c2c1c1c}{sort\+\_\+dupa\+\_\+denumire}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ \mbox{\hyperlink{classService_ae40569ae2746e325a0c9d8858dd08bb9}{sort\+\_\+dupa\+\_\+destinatie}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ \mbox{\hyperlink{classService_a1e04436587179355206378ebdb50fb75}{sort\+\_\+dupa\+\_\+tip\+\_\+si\+\_\+pret}} ()
+\item 
+vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ \& \mbox{\hyperlink{classService_a8301178037b95455fd12e3696c4a48fe}{get\+\_\+all}} ()
+\item 
+\mbox{\hyperlink{classOferta}{Oferta}} \mbox{\hyperlink{classService_aaa360427e3643a85b32c6a0f32eb41c6}{cauta\+\_\+dupa\+\_\+destinatie}} (const string \&destinatie)
+\item 
+void \mbox{\hyperlink{classService_af4e5435c1f14dc7cec35263051c34640}{sterge\+\_\+wishlist}} ()
+\item 
+void \mbox{\hyperlink{classService_a79387319a371399b185cf7c72e2f5e4c}{add\+\_\+wishlist\+\_\+dupa\+\_\+denumire}} (string denumire)
+\item 
+void \mbox{\hyperlink{classService_ac60d38711335533561463e7f8b3f611c}{genereaza\+\_\+random\+\_\+oferte\+\_\+wishlist}} (int numar)
+\item 
+vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ \& \mbox{\hyperlink{classService_a38b7b1ee69dc6d831bb0f44f93f9b0a4}{returneaza\+\_\+wishlist}} ()
+\item 
+void \mbox{\hyperlink{classService_acbf798e345818764e2a91df1ad60575b}{exporta}} (string nume\+\_\+fisier)
+\item 
+map$<$ string, \mbox{\hyperlink{classDTO__Raport}{DTO\+\_\+\+Raport}} $>$ \mbox{\hyperlink{classService_a8164177dcb24274830050b16a8a83cf9}{generare\+\_\+raport}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classService_ac85c62879e84c16052fa688b779ad379}\label{classService_ac85c62879e84c16052fa688b779ad379}} 
+\index{Service@{Service}!Service@{Service}}
+\index{Service@{Service}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{Service()}{Service()}}
+{\footnotesize\ttfamily Service\+::\+Service (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+Constructor pentru clasa \mbox{\hyperlink{classService}{Service}} 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classService_ad7786df86b71695cd1a15f279b7d6cee}\label{classService_ad7786df86b71695cd1a15f279b7d6cee}} 
+\index{Service@{Service}!add\_oferta@{add\_oferta}}
+\index{add\_oferta@{add\_oferta}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{add\_oferta()}{add\_oferta()}}
+{\footnotesize\ttfamily void Service\+::add\+\_\+oferta (\begin{DoxyParamCaption}\item[{const int \&}]{id,  }\item[{const string \&}]{denum,  }\item[{const string \&}]{dest,  }\item[{const string \&}]{tip,  }\item[{const int \&}]{pret }\end{DoxyParamCaption})}
+
+Adauga o oferta in lista de oferte id -\/ int denum -\/ string dest -\/ string tip -\/ string pret -\/ int @raise \mbox{\hyperlink{classRepoException}{Repo\+Exception}} -\/ exista deja o oferta cu datele date @raise \mbox{\hyperlink{classValidatorException}{Validator\+Exception}} -\/ oferta noua creata nu este valida Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_ad7786df86b71695cd1a15f279b7d6cee_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_ad7786df86b71695cd1a15f279b7d6cee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classService_a79387319a371399b185cf7c72e2f5e4c}\label{classService_a79387319a371399b185cf7c72e2f5e4c}} 
+\index{Service@{Service}!add\_wishlist\_dupa\_denumire@{add\_wishlist\_dupa\_denumire}}
+\index{add\_wishlist\_dupa\_denumire@{add\_wishlist\_dupa\_denumire}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{add\_wishlist\_dupa\_denumire()}{add\_wishlist\_dupa\_denumire()}}
+{\footnotesize\ttfamily void Service\+::add\+\_\+wishlist\+\_\+dupa\+\_\+denumire (\begin{DoxyParamCaption}\item[{string}]{denumire }\end{DoxyParamCaption})}
+
+Adauga o oferta in wishlist dupa o denumire data 
+\begin{DoxyParams}{Parameters}
+{\em denumire} & -\/ string \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classService_a79387319a371399b185cf7c72e2f5e4c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_a79387319a371399b185cf7c72e2f5e4c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classService_aaa360427e3643a85b32c6a0f32eb41c6}\label{classService_aaa360427e3643a85b32c6a0f32eb41c6}} 
+\index{Service@{Service}!cauta\_dupa\_destinatie@{cauta\_dupa\_destinatie}}
+\index{cauta\_dupa\_destinatie@{cauta\_dupa\_destinatie}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{cauta\_dupa\_destinatie()}{cauta\_dupa\_destinatie()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classOferta}{Oferta}} Service\+::cauta\+\_\+dupa\+\_\+destinatie (\begin{DoxyParamCaption}\item[{const string \&}]{destinatie }\end{DoxyParamCaption})}
+
+Cauta o oferta dupa destinatie 
+\begin{DoxyParams}{Parameters}
+{\em destinatie} & -\/ string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classOferta}{Oferta}} 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classService_aaa360427e3643a85b32c6a0f32eb41c6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_aaa360427e3643a85b32c6a0f32eb41c6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classService_a02333167f996d434396b4fb9a2bd6d1d}\label{classService_a02333167f996d434396b4fb9a2bd6d1d}} 
+\index{Service@{Service}!delete\_oferta@{delete\_oferta}}
+\index{delete\_oferta@{delete\_oferta}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{delete\_oferta()}{delete\_oferta()}}
+{\footnotesize\ttfamily void Service\+::delete\+\_\+oferta (\begin{DoxyParamCaption}\item[{const int \&}]{id }\end{DoxyParamCaption})}
+
+Sterge o oferta din lista de oferte id -\/ int @raise \mbox{\hyperlink{classRepoException}{Repo\+Exception}} -\/ nu exista oferta cu id-\/ul dat Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{classService_a02333167f996d434396b4fb9a2bd6d1d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_a02333167f996d434396b4fb9a2bd6d1d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classService_acbf798e345818764e2a91df1ad60575b}\label{classService_acbf798e345818764e2a91df1ad60575b}} 
+\index{Service@{Service}!exporta@{exporta}}
+\index{exporta@{exporta}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{exporta()}{exporta()}}
+{\footnotesize\ttfamily void Service\+::exporta (\begin{DoxyParamCaption}\item[{string}]{nume\+\_\+fisier }\end{DoxyParamCaption})}
+
+Exporta wishlist-\/ul intr-\/un fisier 
+\begin{DoxyParams}{Parameters}
+{\em nume\+\_\+fisier} & -\/ string \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=292pt]{classService_acbf798e345818764e2a91df1ad60575b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_acbf798e345818764e2a91df1ad60575b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classService_a7fd8c11c03d5b4914792a382ad0319e3}\label{classService_a7fd8c11c03d5b4914792a382ad0319e3}} 
+\index{Service@{Service}!filtrare\_oferte\_dupa\_destinatie@{filtrare\_oferte\_dupa\_destinatie}}
+\index{filtrare\_oferte\_dupa\_destinatie@{filtrare\_oferte\_dupa\_destinatie}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{filtrare\_oferte\_dupa\_destinatie()}{filtrare\_oferte\_dupa\_destinatie()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ Service\+::filtrare\+\_\+oferte\+\_\+dupa\+\_\+destinatie (\begin{DoxyParamCaption}\item[{const string \&}]{dest }\end{DoxyParamCaption})}
+
+Returneaza toate ofertele ce au destinatia data dest -\/ string \begin{DoxyReturn}{Returns}
+vector$<$\+Oferta$>$ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_a7fd8c11c03d5b4914792a382ad0319e3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_a7fd8c11c03d5b4914792a382ad0319e3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classService_afbdd5805cc628edeccbe9bf5952b448a}\label{classService_afbdd5805cc628edeccbe9bf5952b448a}} 
+\index{Service@{Service}!filtrare\_oferte\_dupa\_pret@{filtrare\_oferte\_dupa\_pret}}
+\index{filtrare\_oferte\_dupa\_pret@{filtrare\_oferte\_dupa\_pret}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{filtrare\_oferte\_dupa\_pret()}{filtrare\_oferte\_dupa\_pret()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ Service\+::filtrare\+\_\+oferte\+\_\+dupa\+\_\+pret (\begin{DoxyParamCaption}\item[{const int \&}]{pret }\end{DoxyParamCaption})}
+
+Returneaza toate ofertele ce au pretul mai mic sau egal decat cel dat pret -\/ int \begin{DoxyReturn}{Returns}
+vector$<$\+Oferta$>$ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{classService_afbdd5805cc628edeccbe9bf5952b448a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_afbdd5805cc628edeccbe9bf5952b448a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classService_a8164177dcb24274830050b16a8a83cf9}\label{classService_a8164177dcb24274830050b16a8a83cf9}} 
+\index{Service@{Service}!generare\_raport@{generare\_raport}}
+\index{generare\_raport@{generare\_raport}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{generare\_raport()}{generare\_raport()}}
+{\footnotesize\ttfamily map$<$ string, \mbox{\hyperlink{classDTO__Raport}{DTO\+\_\+\+Raport}} $>$ Service\+::generare\+\_\+raport (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classService_a8164177dcb24274830050b16a8a83cf9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_a8164177dcb24274830050b16a8a83cf9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classService_ac60d38711335533561463e7f8b3f611c}\label{classService_ac60d38711335533561463e7f8b3f611c}} 
+\index{Service@{Service}!genereaza\_random\_oferte\_wishlist@{genereaza\_random\_oferte\_wishlist}}
+\index{genereaza\_random\_oferte\_wishlist@{genereaza\_random\_oferte\_wishlist}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{genereaza\_random\_oferte\_wishlist()}{genereaza\_random\_oferte\_wishlist()}}
+{\footnotesize\ttfamily void Service\+::genereaza\+\_\+random\+\_\+oferte\+\_\+wishlist (\begin{DoxyParamCaption}\item[{int}]{numar }\end{DoxyParamCaption})}
+
+Genereaza random oferte in wishlist 
+\begin{DoxyParams}{Parameters}
+{\em numar} & -\/ int \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_ac60d38711335533561463e7f8b3f611c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_ac60d38711335533561463e7f8b3f611c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classService_a8301178037b95455fd12e3696c4a48fe}\label{classService_a8301178037b95455fd12e3696c4a48fe}} 
+\index{Service@{Service}!get\_all@{get\_all}}
+\index{get\_all@{get\_all}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{get\_all()}{get\_all()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ \& Service\+::get\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returneaza toate ofertele \begin{DoxyReturn}{Returns}
+vector$<$\+Oferta$>$ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classService_a8301178037b95455fd12e3696c4a48fe_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_a8301178037b95455fd12e3696c4a48fe_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classService_a38b7b1ee69dc6d831bb0f44f93f9b0a4}\label{classService_a38b7b1ee69dc6d831bb0f44f93f9b0a4}} 
+\index{Service@{Service}!returneaza\_wishlist@{returneaza\_wishlist}}
+\index{returneaza\_wishlist@{returneaza\_wishlist}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{returneaza\_wishlist()}{returneaza\_wishlist()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ \& Service\+::returneaza\+\_\+wishlist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returneaza wishlist-\/ul \begin{DoxyReturn}{Returns}
+vector$<$\+Oferta$>$ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{classService_a38b7b1ee69dc6d831bb0f44f93f9b0a4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_a38b7b1ee69dc6d831bb0f44f93f9b0a4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classService_ac0b9a89d0fd90717cd422b641c2c1c1c}\label{classService_ac0b9a89d0fd90717cd422b641c2c1c1c}} 
+\index{Service@{Service}!sort\_dupa\_denumire@{sort\_dupa\_denumire}}
+\index{sort\_dupa\_denumire@{sort\_dupa\_denumire}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{sort\_dupa\_denumire()}{sort\_dupa\_denumire()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ Service\+::sort\+\_\+dupa\+\_\+denumire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returneaza toate ofertele sortate dupa denumire \begin{DoxyReturn}{Returns}
+vector$<$\+Oferta$>$ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_ac0b9a89d0fd90717cd422b641c2c1c1c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_ac0b9a89d0fd90717cd422b641c2c1c1c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classService_ae40569ae2746e325a0c9d8858dd08bb9}\label{classService_ae40569ae2746e325a0c9d8858dd08bb9}} 
+\index{Service@{Service}!sort\_dupa\_destinatie@{sort\_dupa\_destinatie}}
+\index{sort\_dupa\_destinatie@{sort\_dupa\_destinatie}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{sort\_dupa\_destinatie()}{sort\_dupa\_destinatie()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ Service\+::sort\+\_\+dupa\+\_\+destinatie (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returneaza toate ofertele sortate dupa destinatie \begin{DoxyReturn}{Returns}
+vector$<$\+Oferta$>$ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_ae40569ae2746e325a0c9d8858dd08bb9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_ae40569ae2746e325a0c9d8858dd08bb9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classService_a1e04436587179355206378ebdb50fb75}\label{classService_a1e04436587179355206378ebdb50fb75}} 
+\index{Service@{Service}!sort\_dupa\_tip\_si\_pret@{sort\_dupa\_tip\_si\_pret}}
+\index{sort\_dupa\_tip\_si\_pret@{sort\_dupa\_tip\_si\_pret}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{sort\_dupa\_tip\_si\_pret()}{sort\_dupa\_tip\_si\_pret()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ Service\+::sort\+\_\+dupa\+\_\+tip\+\_\+si\+\_\+pret (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returneaza toate ofertele sortate dupa tip si pret \begin{DoxyReturn}{Returns}
+vector$<$\+Oferta$>$ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_a1e04436587179355206378ebdb50fb75_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_a1e04436587179355206378ebdb50fb75_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classService_a321299ee3c3e78bb5828f5b9e016b6a7}\label{classService_a321299ee3c3e78bb5828f5b9e016b6a7}} 
+\index{Service@{Service}!sort\_generic@{sort\_generic}}
+\index{sort\_generic@{sort\_generic}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{sort\_generic()}{sort\_generic()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ Service\+::sort\+\_\+generic (\begin{DoxyParamCaption}\item[{bool($\ast$)(const \mbox{\hyperlink{classOferta}{Oferta}} \&, const \mbox{\hyperlink{classOferta}{Oferta}} \&)}]{conditie }\end{DoxyParamCaption})}
+
+Returneaza toate ofertele ce au tipul dat tip -\/ string \begin{DoxyReturn}{Returns}
+vector$<$\+Oferta$>$ 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{classService_a321299ee3c3e78bb5828f5b9e016b6a7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_a321299ee3c3e78bb5828f5b9e016b6a7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classService_af4e5435c1f14dc7cec35263051c34640}\label{classService_af4e5435c1f14dc7cec35263051c34640}} 
+\index{Service@{Service}!sterge\_wishlist@{sterge\_wishlist}}
+\index{sterge\_wishlist@{sterge\_wishlist}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{sterge\_wishlist()}{sterge\_wishlist()}}
+{\footnotesize\ttfamily void Service\+::sterge\+\_\+wishlist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sterge toate elementele din wishlist Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_af4e5435c1f14dc7cec35263051c34640_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_af4e5435c1f14dc7cec35263051c34640_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classService_a93dc9abb51301da85d8d41d0a914a9f6}\label{classService_a93dc9abb51301da85d8d41d0a914a9f6}} 
+\index{Service@{Service}!update\_oferta@{update\_oferta}}
+\index{update\_oferta@{update\_oferta}!Service@{Service}}
+\doxysubsubsection{\texorpdfstring{update\_oferta()}{update\_oferta()}}
+{\footnotesize\ttfamily void Service\+::update\+\_\+oferta (\begin{DoxyParamCaption}\item[{const int \&}]{id,  }\item[{const string \&}]{denumire,  }\item[{const string \&}]{dest,  }\item[{const string \&}]{tip,  }\item[{const int \&}]{pret }\end{DoxyParamCaption})}
+
+Modifica o oferta din lista de oferte id -\/ int denumire -\/ string dest -\/ string tip -\/ string pret -\/ int @raise \mbox{\hyperlink{classRepoException}{Repo\+Exception}} -\/ exista deja o oferta cu datele date @raise \mbox{\hyperlink{classValidatorException}{Validator\+Exception}} -\/ oferta noua creata nu este valida Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_a93dc9abb51301da85d8d41d0a914a9f6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classService_a93dc9abb51301da85d8d41d0a914a9f6_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{service_8h}{service.\+h}}\item 
+\mbox{\hyperlink{service_8cpp}{service.\+cpp}}\end{DoxyCompactItemize}

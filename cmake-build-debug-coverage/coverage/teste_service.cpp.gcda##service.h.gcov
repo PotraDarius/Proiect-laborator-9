@@ -1,0 +1,199 @@
+        -:    0:Source:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/service.h
+        -:    0:Graph:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/teste_service.cpp.gcno
+        -:    0:Data:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/teste_service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <utility>
+        -:    3:#include <map>
+        -:    4:#include <memory>
+        -:    5:
+        -:    6:#include "undo.h"
+        -:    7:#include "domain.h"
+        -:    8:#include "repository.h"
+        -:    9:#include "validator.h"
+        -:   10:
+        -:   11:
+        -:   12:using std::vector;
+        -:   13:using std::map;
+        -:   14:using std::unique_ptr;
+        -:   15:using std::make_unique;
+        -:   16:
+        -:   17:
+        -:   18:class ServiceException{
+        -:   19:private:
+        -:   20:    string msg;
+        -:   21:public:
+        -:   22:    explicit ServiceException(string msg): msg{std::move(msg)}{}
+        -:   23:    [[nodiscard]] string get_msg() const {
+        -:   24:        return this->msg;
+        -:   25:    }
+        -:   26:};
+        -:   27:
+        -:   28:class DTO_Raport;
+        -:   29:
+        -:   30:class Service
+        -:   31:{
+        -:   32:private:
+        -:   33:    RepoGeneric& repo;
+        -:   34:    Validator val;
+        -:   35:    RepoWishlist wishlist;
+        -:   36:    vector<unique_ptr<ActiuneUndo>> lista_undo;
+        -:   37:public:
+        -:   38:    /**
+        -:   39:     * Constructor pentru clasa Service
+        -:   40:     */
+function _ZN7ServiceC2ER11RepoGeneric called 0 returned 0% blocks executed 0%
+    #####:   41:    explicit Service(RepoGeneric& repo): repo{repo}{};
+    %%%%%:   41-block  0
+call    0 never executed
+call    1 never executed
+        -:   42:
+        -:   43:    /**
+        -:   44:     * Adauga o oferta in lista de oferte
+        -:   45:     * id - int
+        -:   46:     * denum - string
+        -:   47:     * dest - string
+        -:   48:     * tip - string
+        -:   49:     * pret - int
+        -:   50:     * @raise RepoException - exista deja o oferta cu datele date
+        -:   51:     * @raise ValidatorException - oferta noua creata nu este valida
+        -:   52:     */
+        -:   53:    void add_oferta(const int& id,const string& denum, const string &dest, const string &tip, const int &pret);
+        -:   54:
+        -:   55:    /**
+        -:   56:     * Sterge o oferta din lista de oferte
+        -:   57:     * id - int
+        -:   58:     * @raise RepoException - nu exista oferta cu id-ul dat
+        -:   59:     */
+        -:   60:    void delete_oferta(const int& id);
+        -:   61:
+        -:   62:    /**
+        -:   63:     * Modifica o oferta din lista de oferte
+        -:   64:     *  id - int
+        -:   65:     *  denumire - string
+        -:   66:     *  dest - string
+        -:   67:     *  tip - string
+        -:   68:     *  pret - int
+        -:   69:     *  @raise RepoException - exista deja o oferta cu datele date
+        -:   70:     * @raise ValidatorException - oferta noua creata nu este valida
+        -:   71:     */
+        -:   72:    void update_oferta(const int& id,const string &denumire, const string &dest, const string &tip, const int &pret);
+        -:   73:
+        -:   74:    /**
+        -:   75:     * Returneaza toate ofertele ce au destinatia data
+        -:   76:     * dest - string
+        -:   77:     * @return vector<Oferta>
+        -:   78:     */
+        -:   79:    vector<Oferta> filtrare_oferte_dupa_destinatie(const string& dest);
+        -:   80:
+        -:   81:    /**
+        -:   82:     * Returneaza toate ofertele ce au pretul mai mic sau egal decat cel dat
+        -:   83:     * pret - int
+        -:   84:     * @return vector<Oferta>
+        -:   85:     */
+        -:   86:    vector<Oferta> filtrare_oferte_dupa_pret(const int& pret);
+        -:   87:
+        -:   88:    /**
+        -:   89:     * Returneaza toate ofertele ce au tipul dat
+        -:   90:     * tip - string
+        -:   91:     * @return vector<Oferta>
+        -:   92:     */
+        -:   93:    vector<Oferta> sort_generic(bool (*conditie)(const Oferta&, const Oferta&));
+        -:   94:
+        -:   95:    /**
+        -:   96:     * Returneaza toate ofertele sortate dupa denumire
+        -:   97:     * @return vector<Oferta>
+        -:   98:     */
+        -:   99:    vector<Oferta> sort_dupa_denumire();
+        -:  100:
+        -:  101:    /**
+        -:  102:     * Returneaza toate ofertele sortate dupa destinatie
+        -:  103:     * @return vector<Oferta>
+        -:  104:     */
+        -:  105:    vector<Oferta> sort_dupa_destinatie();
+        -:  106:
+        -:  107:    /**
+        -:  108:     * Returneaza toate ofertele sortate dupa tip si pret
+        -:  109:     * @return vector<Oferta>
+        -:  110:     */
+        -:  111:    vector<Oferta> sort_dupa_tip_si_pret();
+        -:  112:
+        -:  113:    /**
+        -:  114:     * Returneaza toate ofertele
+        -:  115:     * @return vector<Oferta>
+        -:  116:     */
+        -:  117:    vector<Oferta>& get_all();
+        -:  118:
+        -:  119:    /**
+        -:  120:     * Cauta o oferta dupa destinatie
+        -:  121:     * @param destinatie - string
+        -:  122:     * @return Oferta
+        -:  123:     */
+        -:  124:    Oferta cauta_dupa_destinatie(const string& destinatie);
+        -:  125:
+        -:  126:    /**
+        -:  127:     * Sterge toate elementele din wishlist
+        -:  128:     */
+        -:  129:    void sterge_wishlist();
+        -:  130:
+        -:  131:
+        -:  132:    /**
+        -:  133:     * Adauga o oferta in wishlist dupa o denumire data
+        -:  134:     * @param denumire - string
+        -:  135:     */
+        -:  136:    void add_wishlist_dupa_denumire(string denumire);
+        -:  137:
+        -:  138:
+        -:  139:    /**
+        -:  140:     * Genereaza random oferte in wishlist
+        -:  141:     * @param numar - int
+        -:  142:     */
+        -:  143:    void genereaza_random_oferte_wishlist(int numar);
+        -:  144:
+        -:  145:
+        -:  146:    /**
+        -:  147:     * Returneaza wishlist-ul
+        -:  148:     * @return vector<Oferta>
+        -:  149:     */
+        -:  150:    vector<Oferta>& returneaza_wishlist();
+        -:  151:
+        -:  152:    /**
+        -:  153:     * Exporta wishlist-ul intr-un fisier
+        -:  154:     * @param nume_fisier - string
+        -:  155:     */
+        -:  156:    void exporta(string nume_fisier);
+        -:  157:
+        -:  158:    map<string, DTO_Raport> generare_raport();
+        -:  159:
+        -:  160:
+        -:  161:    void undo();
+        -:  162:
+function _ZN7ServiceD2Ev called 0 returned 0% blocks executed 0%
+    #####:  163:    ~Service() = default;
+    %%%%%:  163-block  0
+call    0 never executed
+call    1 never executed
+        -:  164:
+        -:  165:
+        -:  166:};
+        -:  167:
+        -:  168:class DTO_Raport{
+        -:  169:private:
+        -:  170:    string entity_type;
+        -:  171:    int count;
+        -:  172:public:
+function _ZN10DTO_RaportC2Ev called 0 returned 0% blocks executed 0%
+    #####:  173:    DTO_Raport() = default;
+    %%%%%:  173-block  0
+call    0 never executed
+        -:  174:    DTO_Raport(string type, int count);
+        -:  175:
+        -:  176:    void incrementare();
+        -:  177:
+        -:  178:    [[nodiscard]] string get_entity_type() const;
+        -:  179:
+        -:  180:    [[nodiscard]] int get_count() const;
+        -:  181:
+        -:  182:};
+        -:  183:
+        -:  184:

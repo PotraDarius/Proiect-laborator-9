@@ -1,0 +1,123 @@
+\hypertarget{classIterator}{}\doxysection{Iterator$<$ Elem\+Type $>$ Class Template Reference}
+\label{classIterator}\index{Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}}
+
+
+{\ttfamily \#include $<$vector\+\_\+dinamic.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classIterator_a7bd8f5b6f988a4a8ca42a8d08fe1ce3a}{Iterator}} (const \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$ \&vec) noexcept
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{classIterator}{Iterator}} functions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classIterator_ab6d226a6a57323262dffb7fe6c5201be}{Iterator}} (const \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$ \&vec, int poz) noexcept
+\item 
+bool \mbox{\hyperlink{classIterator_ac25a1c37264719d4a4a397b1c17e04be}{valid}} () const
+\item 
+Elem\+Type \& \mbox{\hyperlink{classIterator_ae85c80cfe147d6d74147b1ef2eb7f282}{element}} () const noexcept
+\item 
+void \mbox{\hyperlink{classIterator_a27d88c0d820e7d658ad4dc46a2eb6130}{next}} () noexcept
+\item 
+Elem\+Type \& \mbox{\hyperlink{classIterator_a072440efa7a8d4016247c78c29172286}{operator$\ast$}} () const
+\item 
+\mbox{\hyperlink{classIterator}{Iterator}} \& \mbox{\hyperlink{classIterator_ab7ce5172e74c0b2a8c6733c30f398caa}{operator++}} ()
+\item 
+bool \mbox{\hyperlink{classIterator_a72337a7fdef9480f81fe382aa9d718c6}{operator==}} (const \mbox{\hyperlink{classIterator}{Iterator}} \&ot) const noexcept
+\item 
+bool \mbox{\hyperlink{classIterator_a96a8164ce9f59c0b40a75ba9c9926571}{operator!=}} (const \mbox{\hyperlink{classIterator}{Iterator}} \&ot) const noexcept
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classIterator_a7bd8f5b6f988a4a8ca42a8d08fe1ce3a}\label{classIterator_a7bd8f5b6f988a4a8ca42a8d08fe1ce3a}} 
+\index{Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+\mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$\+::\mbox{\hyperlink{classIterator}{Iterator}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$ \&}]{vec }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+
+
+\mbox{\hyperlink{classIterator}{Iterator}} functions. 
+
+Constructor pentru clasa \mbox{\hyperlink{classIterator}{Iterator}} vec -\/ \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} \mbox{\Hypertarget{classIterator_ab6d226a6a57323262dffb7fe6c5201be}\label{classIterator_ab6d226a6a57323262dffb7fe6c5201be}} 
+\index{Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}!Iterator@{Iterator}}
+\index{Iterator@{Iterator}!Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{Iterator()}{Iterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+\mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$\+::\mbox{\hyperlink{classIterator}{Iterator}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}}$<$ Elem\+Type $>$ \&}]{vec,  }\item[{int}]{poz }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+Constructor pentru clasa \mbox{\hyperlink{classIterator}{Iterator}} vec -\/ \mbox{\hyperlink{classVectorDinamic}{Vector\+Dinamic}} poz -\/ int 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classIterator_ae85c80cfe147d6d74147b1ef2eb7f282}\label{classIterator_ae85c80cfe147d6d74147b1ef2eb7f282}} 
+\index{Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}!element@{element}}
+\index{element@{element}!Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{element()}{element()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+Elem\+Type \& \mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$\+::element\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+Functie care returneaza elementul de pe pozitia poz \begin{DoxyReturn}{Returns}
+Elem\+Type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIterator_a27d88c0d820e7d658ad4dc46a2eb6130}\label{classIterator_a27d88c0d820e7d658ad4dc46a2eb6130}} 
+\index{Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}!next@{next}}
+\index{next@{next}!Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{next()}{next()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+void \mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$\+::next\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+Functie care trece la urmatorul element \mbox{\Hypertarget{classIterator_a96a8164ce9f59c0b40a75ba9c9926571}\label{classIterator_a96a8164ce9f59c0b40a75ba9c9926571}} 
+\index{Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+bool \mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$ \&}]{ot }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+Operator de inegalitate ot -\/ \mbox{\hyperlink{classIterator}{Iterator}} \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIterator_a072440efa7a8d4016247c78c29172286}\label{classIterator_a072440efa7a8d4016247c78c29172286}} 
+\index{Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+Elem\+Type \& \mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$\+::operator$\ast$}
+
+Operator de dereferentiere \begin{DoxyReturn}{Returns}
+Elem\+Type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIterator_ab7ce5172e74c0b2a8c6733c30f398caa}\label{classIterator_ab7ce5172e74c0b2a8c6733c30f398caa}} 
+\index{Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}!operator++@{operator++}}
+\index{operator++@{operator++}!Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+\mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$ \& \mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$\+::operator++}
+
+Operator de incrementare \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classIterator}{Iterator}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIterator_a72337a7fdef9480f81fe382aa9d718c6}\label{classIterator_a72337a7fdef9480f81fe382aa9d718c6}} 
+\index{Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+bool \mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$ \&}]{ot }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+Operator de egalitate ot -\/ \mbox{\hyperlink{classIterator}{Iterator}} \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classIterator_ac25a1c37264719d4a4a397b1c17e04be}\label{classIterator_ac25a1c37264719d4a4a397b1c17e04be}} 
+\index{Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}!valid@{valid}}
+\index{valid@{valid}!Iterator$<$ ElemType $>$@{Iterator$<$ ElemType $>$}}
+\doxysubsubsection{\texorpdfstring{valid()}{valid()}}
+{\footnotesize\ttfamily template$<$typename Elem\+Type $>$ \\
+bool \mbox{\hyperlink{classIterator}{Iterator}}$<$ Elem\+Type $>$\+::valid}
+
+Functie care verifica daca iteratorul este valid \begin{DoxyReturn}{Returns}
+bool 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vector__dinamic_8h}{vector\+\_\+dinamic.\+h}}\end{DoxyCompactItemize}

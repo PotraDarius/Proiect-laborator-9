@@ -1,0 +1,275 @@
+        -:    0:Source:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/domain.cpp
+        -:    0:Graph:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/domain.cpp.gcno
+        -:    0:Data:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/domain.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "domain.h"
+        -:    2:#include <iostream>
+        -:    3:#include <random>
+        -:    4:#include <algorithm>
+        -:    5:
+        -:    6:
+        -:    7:using std::string;
+        -:    8:using std::cout;
+        -:    9:
+function _ZN6OfertaC2EiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_S5_i called 82 returned 100% blocks executed 62%
+       82:   10:Oferta ::Oferta(int id, string denumire, string destinatie, string tip, int pret): id {id}, denumire{denumire}, destinatie{destinatie},
+       82:   10-block  0
+call    0 returned 82
+call    1 returned 82
+branch  2 taken 82 (fallthrough)
+branch  3 taken 0 (throw)
+       82:   11:tip{tip}, pret{pret}{
+       82:   11-block  0
+call    0 returned 82
+branch  1 taken 82 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   12:
+       82:   13:}
+       82:   13-block  0
+    $$$$$:   13-block  1
+call    0 never executed
+    $$$$$:   13-block  2
+call    1 never executed
+        -:   14:
+        -:   15:/*Oferta ::Oferta(const Oferta &ot): id{ot.get_id()}, denumire{ot.get_denumire()}, destinatie{ot.get_destinatie()},
+        -:   16:tip {ot.get_tip()}, pret{ot.get_pret()}{
+        -:   17:    cout << "Hello\n";
+        -:   18:
+        -:   19:}*/
+        -:   20:
+function _ZNK6Oferta8get_pretEv called 107 returned 100% blocks executed 100%
+      107:   21:int Oferta::get_pret() const {
+      107:   22:    return this->pret;
+      107:   22-block  0
+        -:   23:}
+        -:   24:
+function _ZNK6Oferta7get_tipB5cxx11Ev called 120 returned 100% blocks executed 100%
+      120:   25:string Oferta::get_tip() const  {
+      120:   26:    return this->tip;
+      120:   26-block  0
+call    0 returned 120
+        -:   27:}
+        -:   28:
+function _ZNK6Oferta14get_destinatieB5cxx11Ev called 120 returned 100% blocks executed 100%
+      120:   29:string Oferta::get_destinatie() const {
+      120:   30:    return this->destinatie;
+      120:   30-block  0
+call    0 returned 120
+        -:   31:}
+        -:   32:
+function _ZNK6Oferta12get_denumireB5cxx11Ev called 125 returned 100% blocks executed 100%
+      125:   33:string Oferta::get_denumire() const {
+      125:   34:    return this->denumire;
+      125:   34-block  0
+call    0 returned 125
+        -:   35:}
+        -:   36:
+function _ZNK6Oferta6get_idEv called 115 returned 100% blocks executed 100%
+      115:   37:int Oferta::get_id() const {
+      115:   38:    return this->id;
+      115:   38-block  0
+        -:   39:}
+        -:   40:
+function _ZN6Oferta12set_denumireENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 37 returned 100% blocks executed 100%
+       37:   41:void Oferta::set_denumire(string denumire) {
+       37:   42:    this->denumire = denumire;
+       37:   42-block  0
+call    0 returned 37
+       37:   43:}
+        -:   44:
+function _ZN6Oferta14set_destinatieENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 37 returned 100% blocks executed 100%
+       37:   45:void Oferta::set_destinatie(string destinatie) {
+       37:   46:    this->destinatie = destinatie;
+       37:   46-block  0
+call    0 returned 37
+       37:   47:}
+        -:   48:
+function _ZN6Oferta7set_tipENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 37 returned 100% blocks executed 100%
+       37:   49:void Oferta::set_tip(string tip) {
+       37:   50:    this->tip = tip;
+       37:   50-block  0
+call    0 returned 37
+       37:   51:}
+        -:   52:
+function _ZN6Oferta8set_pretEi called 37 returned 100% blocks executed 100%
+       37:   53:void Oferta::set_pret(int pret) {
+       37:   54:    this->pret = pret;
+       37:   55:}
+        -:   56:
+function _ZNK6OfertaeqERKS_ called 50 returned 100% blocks executed 100%
+       50:   57:bool Oferta::operator==(const Oferta &ot) const {
+       50:   58:    return this->denumire == ot.denumire && this->destinatie == ot.destinatie && this->tip == ot.tip && this->pret == ot.pret;
+       50:   58-block  0
+call    0 returned 50
+branch  1 taken 10 (fallthrough)
+branch  2 taken 40
+       10:   58-block  1
+call    3 returned 10
+branch  4 taken 10 (fallthrough)
+branch  5 taken 0
+       10:   58-block  2
+call    6 returned 10
+branch  7 taken 10 (fallthrough)
+branch  8 taken 0
+       10:   58-block  3
+branch  9 taken 10 (fallthrough)
+branch 10 taken 0
+       10:   58-block  4
+       40:   58-block  5
+       50:   58-block  6
+        -:   59:}
+        -:   60:
+function _ZN6OfertaaSERKS_ called 36 returned 100% blocks executed 64%
+       36:   61:void Oferta::operator=(const Oferta &ot) {
+       36:   62:    this->id = ot.get_id();
+       36:   62-block  0
+call    0 returned 36
+       36:   63:    this->set_denumire(ot.get_denumire());
+call    0 returned 36
+call    1 returned 36
+branch  2 taken 36 (fallthrough)
+branch  3 taken 0 (throw)
+       36:   63-block  0
+call    4 returned 36
+    $$$$$:   63-block  1
+call    5 never executed
+    $$$$$:   63-block  2
+call    6 never executed
+       36:   64:    this->set_destinatie(ot.get_destinatie());
+call    0 returned 36
+call    1 returned 36
+branch  2 taken 36 (fallthrough)
+branch  3 taken 0 (throw)
+       36:   64-block  0
+call    4 returned 36
+    $$$$$:   64-block  1
+call    5 never executed
+    $$$$$:   64-block  2
+call    6 never executed
+       36:   65:    this->set_tip(ot.get_tip());
+call    0 returned 36
+call    1 returned 36
+branch  2 taken 36 (fallthrough)
+branch  3 taken 0 (throw)
+       36:   65-block  0
+call    4 returned 36
+    $$$$$:   65-block  1
+call    5 never executed
+       36:   66:    this->set_pret(ot.get_pret());
+call    0 returned 36
+call    1 returned 36
+        -:   67:
+       36:   68:}
+        -:   69:
+function _Z16compara_denumireRK6OfertaS1_ called 4 returned 100% blocks executed 67%
+        4:   70:bool compara_denumire(const Oferta& of1, const Oferta& of2) {
+        4:   71:    if(of1.get_denumire().compare(of2.get_denumire()) < 0)
+        4:   71-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   71-block  1
+call    4 returned 4
+branch  5 taken 4 (fallthrough)
+branch  6 taken 0 (throw)
+        4:   71-block  2
+call    7 returned 4
+call    8 returned 4
+branch  9 taken 3 (fallthrough)
+branch 10 taken 1
+    $$$$$:   71-block  3
+call   11 never executed
+    $$$$$:   71-block  4
+    $$$$$:   71-block  5
+call   12 never executed
+        3:   72:        return true;
+        3:   72-block  0
+        1:   73:    return false;
+        1:   73-block  0
+        -:   74:}
+        -:   75:
+function _Z18compara_destinatieRK6OfertaS1_ called 4 returned 100% blocks executed 67%
+        4:   76:bool compara_destinatie(const Oferta& of1, const Oferta& of2){
+        4:   77:    if(of1.get_destinatie().compare(of2.get_destinatie()) < 0)
+        4:   77-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   77-block  1
+call    4 returned 4
+branch  5 taken 4 (fallthrough)
+branch  6 taken 0 (throw)
+        4:   77-block  2
+call    7 returned 4
+call    8 returned 4
+branch  9 taken 3 (fallthrough)
+branch 10 taken 1
+    $$$$$:   77-block  3
+call   11 never executed
+    $$$$$:   77-block  4
+    $$$$$:   77-block  5
+call   12 never executed
+        3:   78:        return true;
+        3:   78-block  0
+        1:   79:    return false;
+        1:   79-block  0
+        -:   80:}
+        -:   81:
+function _Z19compara_tip_si_pretRK6OfertaS1_ called 5 returned 100% blocks executed 71%
+        5:   82:bool compara_tip_si_pret(const Oferta& of1, const Oferta& of2){
+        5:   83:    if(of1.get_tip().compare(of2.get_tip()) < 0)
+        5:   83-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        5:   83-block  1
+call    4 returned 5
+branch  5 taken 5 (fallthrough)
+branch  6 taken 0 (throw)
+        5:   83-block  2
+call    7 returned 5
+call    8 returned 5
+branch  9 taken 1 (fallthrough)
+branch 10 taken 4
+    $$$$$:   83-block  3
+call   11 never executed
+    $$$$$:   83-block  4
+    $$$$$:   83-block  5
+call   12 never executed
+    $$$$$:   83-block  6
+call   13 never executed
+        1:   84:        return true;
+        1:   84-block  0
+        4:   85:    else if(of1.get_tip() == of2.get_tip()){
+        4:   85-block  0
+call    0 returned 4
+call    1 returned 4
+branch  2 taken 4 (fallthrough)
+branch  3 taken 0 (throw)
+        4:   85-block  1
+call    4 returned 4
+call    5 returned 4
+call    6 returned 4
+branch  7 taken 1 (fallthrough)
+branch  8 taken 3
+    $$$$$:   85-block  2
+call    9 never executed
+        1:   86:        if(of1.get_pret() <= of2.get_pret())
+        1:   86-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0
+        1:   87:            return true;
+        1:   87-block  0
+        -:   88:    }
+        3:   89:    return false;
+        3:   89-block  0
+        -:   90:}
+        -:   91:
+        -:   92:
+        -:   93:
+        -:   94:

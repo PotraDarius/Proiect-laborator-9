@@ -1,0 +1,883 @@
+        -:    0:Source:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/service.cpp
+        -:    0:Graph:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/service.cpp.gcno
+        -:    0:Data:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "service.h"
+        -:    2:#include "domain.h"
+        -:    3:#include <algorithm>
+        -:    4:#include <chrono>
+        -:    5:#include <random>
+        -:    6:#include <fstream>
+        -:    7:#include <utility>
+        -:    8:
+        -:    9:using std::copy_if;
+        -:   10:using std::back_inserter;
+        -:   11:using std::sort;
+        -:   12:using std::find_if;
+        -:   13:using std::map;
+        -:   14:
+        -:   15:
+function _ZN7Service10add_ofertaERKiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_S9_S1_ called 41 returned 95% blocks executed 62%
+       41:   16:void Service::add_oferta(const int& id, const string& denum, const string &dest, const string &tip, const int &pret){
+       82:   17:    Oferta o{id, denum,dest, tip, pret};
+       41:   17-block  0
+call    0 returned 41
+branch  1 taken 41 (fallthrough)
+branch  2 taken 0 (throw)
+       41:   17-block  1
+call    3 returned 41
+branch  4 taken 41 (fallthrough)
+branch  5 taken 0 (throw)
+       41:   17-block  2
+call    6 returned 41
+branch  7 taken 41 (fallthrough)
+branch  8 taken 0 (throw)
+       41:   17-block  3
+call    9 returned 41
+branch 10 taken 41 (fallthrough)
+branch 11 taken 0 (throw)
+call   12 returned 41
+call   13 returned 41
+    $$$$$:   17-block  4
+    $$$$$:   17-block  5
+    $$$$$:   17-block  6
+        -:   18:    try {
+       41:   19:        this->val.validare_oferta(o);
+call    0 returned 41
+branch  1 taken 40 (fallthrough)
+branch  2 taken 1 (throw)
+       40:   20:        this->repo.store_oferta(o);
+       40:   20-block  0
+call    0 returned 40
+branch  1 taken 39 (fallthrough)
+branch  2 taken 1 (throw)
+       39:   21:        lista_undo.push_back(make_unique<UndoAdauga>(repo, o));
+       39:   21-block  0
+call    0 returned 39
+branch  1 taken 39 (fallthrough)
+branch  2 taken 0 (throw)
+       39:   21-block  1
+call    3 returned 39
+call    4 returned 39
+branch  5 taken 39 (fallthrough)
+branch  6 taken 0 (throw)
+       39:   21-block  2
+call    7 returned 39
+call    8 returned 39
+    $$$$$:   21-block  3
+call    9 never executed
+    $$$$$:   21-block  4
+    $$$$$:   21-block  5
+call   10 never executed
+    $$$$$:   21-block  6
+        -:   22:    }
+        2:   23:    catch(ValidatorException& e){
+        2:   23-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+branch  2 taken 1
+        1:   23-block  1
+call    3 returned 1
+        1:   24:        throw e;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   24-block  0
+call    4 returned 1
+    $$$$$:   24-block  1
+call    5 never executed
+        1:   25:    }
+        1:   25-block  0
+call    0 returned 1
+        1:   26:    catch(RepoException& e){
+        1:   26-block  0
+call    0 returned 1
+        1:   27:        throw e;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   27-block  0
+call    4 returned 1
+    $$$$$:   27-block  1
+call    5 never executed
+        1:   28:    }
+        1:   28-block  0
+call    0 returned 1
+       41:   29:}
+call    0 returned 39
+        2:   29-block  0
+call    1 returned 2
+        -:   30:
+function _ZN7Service13delete_ofertaERKi called 3 returned 67% blocks executed 59%
+        3:   31:void Service::delete_oferta(const int& id){
+        -:   32:    try{
+        3:   33:        Oferta of_stearsa = this->repo.del_oferta(id);
+        3:   33-block  0
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1 (throw)
+        2:   34:        lista_undo.push_back(make_unique<UndoSterge>(repo, of_stearsa));
+        2:   34-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   34-block  1
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   34-block  2
+call    7 returned 2
+call    8 returned 2
+    $$$$$:   34-block  3
+call    9 never executed
+    $$$$$:   34-block  4
+    $$$$$:   34-block  5
+call   10 never executed
+    $$$$$:   34-block  6
+        2:   35:    }
+call    0 returned 2
+    $$$$$:   35-block  0
+call    1 never executed
+        1:   36:    catch(RepoException& e){
+        1:   36-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   36-block  1
+call    2 returned 1
+        1:   37:        throw e;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   37-block  0
+call    4 returned 1
+    $$$$$:   37-block  1
+call    5 never executed
+        1:   38:    }
+        1:   38-block  0
+call    0 returned 1
+        2:   39:}
+        -:   40:
+function _ZN7Service13update_ofertaERKiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_S9_S1_ called 4 returned 50% blocks executed 61%
+        4:   41:void Service::update_oferta(const int& id, const string &denumire, const string &dest, const string &tip, const int &pret){
+        8:   42:    Oferta o{id, denumire, dest, tip, pret};
+        4:   42-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:   42-block  1
+call    3 returned 4
+branch  4 taken 4 (fallthrough)
+branch  5 taken 0 (throw)
+        4:   42-block  2
+call    6 returned 4
+branch  7 taken 4 (fallthrough)
+branch  8 taken 0 (throw)
+        4:   42-block  3
+call    9 returned 4
+branch 10 taken 4 (fallthrough)
+branch 11 taken 0 (throw)
+call   12 returned 4
+call   13 returned 4
+    $$$$$:   42-block  4
+    $$$$$:   42-block  5
+    $$$$$:   42-block  6
+        -:   43:    try{
+        4:   44:        this->val.validare_oferta(o);
+call    0 returned 4
+branch  1 taken 3 (fallthrough)
+branch  2 taken 1 (throw)
+        3:   45:        Oferta oferta_modificata = this->repo.modificare_oferta(id,o);
+        3:   45-block  0
+call    0 returned 3
+branch  1 taken 2 (fallthrough)
+branch  2 taken 1 (throw)
+        2:   46:        lista_undo.push_back(make_unique<UndoModifica>(repo, oferta_modificata, id));
+        2:   46-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   46-block  1
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:   46-block  2
+call    7 returned 2
+call    8 returned 2
+    $$$$$:   46-block  3
+call    9 never executed
+    $$$$$:   46-block  4
+    $$$$$:   46-block  5
+call   10 never executed
+    $$$$$:   46-block  6
+        2:   47:    }
+call    0 returned 2
+    $$$$$:   47-block  0
+call    1 never executed
+        2:   48:    catch(ValidatorException& e){
+        2:   48-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+branch  2 taken 1
+        1:   48-block  1
+call    3 returned 1
+        1:   49:        throw e;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   49-block  0
+call    4 returned 1
+    $$$$$:   49-block  1
+call    5 never executed
+        1:   50:    }
+        1:   50-block  0
+call    0 returned 1
+        1:   51:    catch(RepoException& e){
+        1:   51-block  0
+call    0 returned 1
+        1:   52:        throw e;
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   52-block  0
+call    4 returned 1
+    $$$$$:   52-block  1
+call    5 never executed
+        1:   53:    }
+        1:   53-block  0
+call    0 returned 1
+        4:   54:}
+call    0 returned 2
+        2:   54-block  0
+call    1 returned 2
+        -:   55:
+function _ZN7Service7get_allEv called 7 returned 100% blocks executed 100%
+        7:   56:vector<Oferta>& Service::get_all() {
+        7:   57:    return this->repo.get_all();
+        7:   57-block  0
+call    0 returned 7
+        -:   58:}
+        -:   59:
+function _ZN7Service31filtrare_oferte_dupa_destinatieERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 100% blocks executed 75%
+        2:   60:vector<Oferta> Service::filtrare_oferte_dupa_destinatie(const string& dest){
+        2:   61:    vector oferte = this->repo.get_all();
+        2:   61-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   61-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   62:    vector<Oferta> rez;
+        2:   62-block  0
+call    0 returned 2
+        -:   63:
+        2:   64:    copy_if(oferte.begin(), oferte.end(), back_inserter(rez),
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   64-block  0
+call    3 returned 2
+call    4 returned 2
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0 (throw)
+function _ZZN7Service31filtrare_oferte_dupa_destinatieERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK6OfertaE_clESA_ called 6 returned 100% blocks executed 100%
+        6:   65:            [&dest](const Oferta& o){return o.get_destinatie() == dest;} );
+        6:   65-block  0
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+        4:   66:    return rez;
+        2:   66-block  0
+        2:   66-block  1
+        2:   67:}
+        2:   67-block  0
+call    0 returned 2
+    $$$$$:   67-block  1
+call    1 never executed
+    $$$$$:   67-block  2
+call    2 never executed
+        -:   68:
+function _ZN7Service25filtrare_oferte_dupa_pretERKi called 2 returned 100% blocks executed 75%
+        2:   69:vector<Oferta> Service::filtrare_oferte_dupa_pret(const int& pret){
+        2:   70:    vector oferte = this->repo.get_all();
+        2:   70-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   70-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:   71:    vector<Oferta> rez;
+        2:   71-block  0
+call    0 returned 2
+        -:   72:
+        2:   73:    copy_if(oferte.begin(), oferte.end(), back_inserter(rez),
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   73-block  0
+call    3 returned 2
+call    4 returned 2
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0 (throw)
+function _ZZN7Service25filtrare_oferte_dupa_pretERKiENKUlRK6OfertaE_clES4_ called 6 returned 100% blocks executed 100%
+        6:   74:            [&pret](const Oferta& o){return o.get_pret() <= pret;});
+        6:   74-block  0
+call    0 returned 6
+        4:   75:    return rez;
+        2:   75-block  0
+        2:   75-block  1
+        2:   76:}
+        2:   76-block  0
+call    0 returned 2
+    $$$$$:   76-block  1
+call    1 never executed
+    $$$$$:   76-block  2
+call    2 never executed
+        -:   77:
+        -:   78:
+function _ZN7Service12sort_genericEPFbRK6OfertaS2_E called 3 returned 100% blocks executed 89%
+        3:   79:vector<Oferta> Service::sort_generic(bool (*conditie)(const Oferta &, const Oferta &)) {
+        3:   80:    vector<Oferta> rezultat = repo.get_all();
+        3:   80-block  0
+call    0 returned 3
+call    1 returned 3
+        3:   81:    sort(rezultat.begin(), rezultat.end(), conditie);
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+branch  3 taken 3 (fallthrough)
+branch  4 taken 0 (throw)
+        -:   82:
+        3:   83:    return rezultat;}
+        3:   83-block  0
+        3:   83-block  1
+    $$$$$:   83-block  2
+call    0 never executed
+        -:   84:
+function _ZN7Service18sort_dupa_denumireEv called 1 returned 100% blocks executed 100%
+        1:   85:vector<Oferta> Service::sort_dupa_denumire() {
+        1:   86:    return sort_generic(compara_denumire);
+        1:   86-block  0
+call    0 returned 1
+        -:   87:}
+        -:   88:
+        -:   89:
+function _ZN7Service20sort_dupa_destinatieEv called 1 returned 100% blocks executed 100%
+        1:   90:vector<Oferta> Service::sort_dupa_destinatie() {
+        1:   91:    return sort_generic(compara_destinatie);
+        1:   91-block  0
+call    0 returned 1
+        -:   92:}
+        -:   93:
+function _ZN7Service21sort_dupa_tip_si_pretEv called 1 returned 100% blocks executed 100%
+        1:   94:vector<Oferta> Service::sort_dupa_tip_si_pret() {
+        1:   95:    return sort_generic(compara_tip_si_pret);
+        1:   95-block  0
+call    0 returned 1
+        -:   96:}
+        -:   97:
+function _ZN7Service21cauta_dupa_destinatieERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 2 returned 50% blocks executed 83%
+        2:   98:Oferta Service::cauta_dupa_destinatie(const std::string &destinatie) {
+        2:   99:        vector<Oferta> rez = repo.get_all();
+        2:   99-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:   99-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:  100:        auto it = find_if(rez.begin(), rez.end(),
+        2:  100-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+function _ZZN7Service21cauta_dupa_destinatieERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK6OfertaE_clESA_ called 6 returned 100% blocks executed 100%
+        6:  101:                          [&destinatie](const Oferta &o) { return o.get_destinatie() == destinatie; });
+        6:  101-block  0
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+        -:  102:
+        2:  103:        if(it != rez.end()){
+        2:  103-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 1 (fallthrough)
+branch  3 taken 1
+        2:  104:            return *it;
+        1:  104-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  104-block  1
+        -:  105:        }
+        -:  106:        else{
+        1:  107:            throw ServiceException("Nu exista o oferta cu aceasta destinatie!\n");
+        1:  107-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  107-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  107-block  2
+call    9 never executed
+    $$$$$:  107-block  3
+    $$$$$:  107-block  4
+call   10 never executed
+        -:  108:        }
+        2:  109:}
+        1:  109-block  0
+call    0 returned 1
+        1:  109-block  1
+call    1 returned 1
+        -:  110:
+        -:  111:
+function _ZN7Service15sterge_wishlistEv called 1 returned 100% blocks executed 100%
+        1:  112:void Service::sterge_wishlist() {
+        1:  113:        wishlist.del_all_elements();
+        1:  113-block  0
+call    0 returned 1
+        -:  114:
+        1:  115:}
+        -:  116:
+function _ZN7Service26add_wishlist_dupa_denumireENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 6 returned 83% blocks executed 81%
+        6:  117:void Service::add_wishlist_dupa_denumire(std::string denumire) {
+        6:  118:    vector<Oferta> rez = repo.get_all();
+        6:  118-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:  118-block  1
+call    3 returned 6
+branch  4 taken 6 (fallthrough)
+branch  5 taken 0 (throw)
+        6:  119:    auto it = find_if(rez.begin(), rez.end(),
+        6:  119-block  0
+call    0 returned 6
+call    1 returned 6
+call    2 returned 6
+branch  3 taken 6 (fallthrough)
+branch  4 taken 0 (throw)
+function _ZZN7Service26add_wishlist_dupa_denumireENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEENKUlRK6OfertaE_clES8_ called 15 returned 100% blocks executed 100%
+       15:  120:                      [&denumire](const Oferta &o) { return o.get_denumire() == denumire; });
+       15:  120-block  0
+call    0 returned 15
+call    1 returned 15
+call    2 returned 15
+        6:  121:    if (it != rez.end()) {
+        6:  121-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 5 (fallthrough)
+branch  3 taken 1
+        5:  122:        wishlist.store_oferta(*it);
+        5:  122-block  0
+call    0 returned 5
+call    1 returned 5
+branch  2 taken 5 (fallthrough)
+branch  3 taken 0 (throw)
+        -:  123:    }
+        -:  124:    else{
+        1:  125:        throw ServiceException("Nu exista oferta cu aceasta denumire!");
+        1:  125-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  125-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  125-block  2
+call    9 never executed
+    $$$$$:  125-block  3
+    $$$$$:  125-block  4
+call   10 never executed
+        -:  126:    }
+        -:  127:
+        6:  128:}
+        5:  128-block  0
+call    0 returned 5
+        1:  128-block  1
+call    1 returned 1
+        -:  129:
+function _ZN7Service19returneaza_wishlistEv called 4 returned 100% blocks executed 100%
+        4:  130:vector<Oferta>& Service::returneaza_wishlist() {
+        4:  131:    return wishlist.get_all();
+        4:  131-block  0
+call    0 returned 4
+        -:  132:}
+        -:  133:
+        -:  134:
+        -:  135:
+function _ZN7Service32genereaza_random_oferte_wishlistEi called 2 returned 50% blocks executed 82%
+        2:  136:void Service::genereaza_random_oferte_wishlist(int numar) {
+        2:  137:        vector<Oferta> all = repo.get_all();
+        2:  137-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  137-block  1
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:  138:        if(all.empty()){
+        2:  138-block  0
+call    0 returned 2
+branch  1 taken 1 (fallthrough)
+branch  2 taken 1
+        1:  139:            throw ServiceException("Nu exista inca oferte in lista!\n");
+        1:  139-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  139-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  139-block  2
+call    9 never executed
+    $$$$$:  139-block  3
+    $$$$$:  139-block  4
+call   10 never executed
+        -:  140:        }
+        1:  141:        auto seed = std::chrono::system_clock::now().time_since_epoch().count();
+        1:  141-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+        3:  142:        for (int i = 1; i <= numar; i++) {
+        2:  142-block  0
+        3:  142-block  1
+branch  0 taken 2
+branch  1 taken 1 (fallthrough)
+        2:  143:            std::shuffle(all.begin(), all.end(), std::default_random_engine(seed));
+        2:  143-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  143-block  1
+call    3 returned 2
+call    4 returned 2
+call    5 returned 2
+branch  6 taken 2 (fallthrough)
+branch  7 taken 0 (throw)
+    $$$$$:  143-block  2
+        2:  144:            wishlist.store_oferta(all[0]);
+        2:  144-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 2 (fallthrough)
+branch  3 taken 0 (throw)
+        -:  145:
+        -:  146:        }
+        -:  147:
+        2:  148:}
+        1:  148-block  0
+call    0 returned 1
+        1:  148-block  1
+call    1 returned 1
+        -:  149:
+function _ZN7Service4undoEv called 4 returned 75% blocks executed 79%
+        4:  150:void Service::undo() {
+        4:  151:    if(lista_undo.empty())
+        4:  151-block  0
+call    0 returned 4
+branch  1 taken 1 (fallthrough)
+branch  2 taken 3
+        1:  152:        throw ServiceException("Nu mai exista operatii!");
+        1:  152-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  152-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:  152-block  2
+call    9 never executed
+    $$$$$:  152-block  3
+    $$$$$:  152-block  4
+call   10 never executed
+        -:  153:
+        3:  154:    lista_undo.back()->doUndo();
+        3:  154-block  0
+call    0 returned 3
+call    1 returned 3
+call    2 returned 3
+        3:  155:    lista_undo.pop_back();
+call    0 returned 3
+        3:  156:}
+        -:  157:
+        -:  158:
+function _ZN7Service7exportaENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 1 returned 100% blocks executed 70%
+        1:  159:void Service::exporta(std::string nume_fisier) {
+        1:  160:    nume_fisier += ".csv";
+        1:  160-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  161:    std::ofstream exp(nume_fisier);
+        1:  161-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  162:
+        1:  163:    vector<Oferta> oferte = wishlist.get_all();
+        1:  163-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  163-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        2:  164:    for (const auto& o : oferte) {
+        1:  164-block  0
+call    0 returned 1
+call    1 returned 1
+        1:  164-block  1
+call    2 returned 1
+        2:  164-block  2
+call    3 returned 2
+branch  4 taken 1
+branch  5 taken 1 (fallthrough)
+        1:  165:        exp <<  o.get_id() <<  "/" << o.get_denumire() << "/" << o.get_destinatie() << "/" << o.get_tip() << "/" << o.get_pret() << "\n";
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  165-block  0
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  165-block  1
+call    6 returned 1
+branch  7 taken 1 (fallthrough)
+branch  8 taken 0 (throw)
+        1:  165-block  2
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  165-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:  165-block  4
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:  165-block  5
+call   18 returned 1
+branch 19 taken 1 (fallthrough)
+branch 20 taken 0 (throw)
+        1:  165-block  6
+call   21 returned 1
+branch 22 taken 1 (fallthrough)
+branch 23 taken 0 (throw)
+        1:  165-block  7
+call   24 returned 1
+branch 25 taken 1 (fallthrough)
+branch 26 taken 0 (throw)
+        1:  165-block  8
+call   27 returned 1
+branch 28 taken 1 (fallthrough)
+branch 29 taken 0 (throw)
+        1:  165-block  9
+call   30 returned 1
+branch 31 taken 1 (fallthrough)
+branch 32 taken 0 (throw)
+        1:  165-block 10
+call   33 returned 1
+branch 34 taken 1 (fallthrough)
+branch 35 taken 0 (throw)
+        1:  165-block 11
+call   36 returned 1
+branch 37 taken 1 (fallthrough)
+branch 38 taken 0 (throw)
+        1:  165-block 12
+call   39 returned 1
+branch 40 taken 1 (fallthrough)
+branch 41 taken 0 (throw)
+        1:  165-block 13
+call   42 returned 1
+branch 43 taken 1 (fallthrough)
+branch 44 taken 0 (throw)
+        1:  165-block 14
+call   45 returned 1
+call   46 returned 1
+call   47 returned 1
+call   48 returned 1
+    $$$$$:  165-block 15
+call   49 never executed
+    $$$$$:  165-block 16
+    $$$$$:  165-block 17
+call   50 never executed
+    $$$$$:  165-block 18
+    $$$$$:  165-block 19
+call   51 never executed
+    $$$$$:  165-block 20
+        -:  166:
+        -:  167:    }
+        -:  168:
+        1:  169:    exp.close();
+        1:  169-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  170:
+        1:  171:}
+        1:  171-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:  171-block  1
+call    2 never executed
+    $$$$$:  171-block  2
+call    3 never executed
+        -:  172:
+        -:  173:
+function _ZN10DTO_RaportC2ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi called 2 returned 100% blocks executed 100%
+        2:  174:DTO_Raport::DTO_Raport(std::string type, int count):entity_type{std::move(type)}, count{count}{}
+        2:  174-block  0
+call    0 returned 2
+call    1 returned 2
+        -:  175:
+function _ZN10DTO_Raport12incrementareEv called 1 returned 100% blocks executed 100%
+        1:  176:void DTO_Raport::incrementare() {
+        1:  177:    count++;
+        1:  178:}
+        -:  179:
+function _ZNK10DTO_Raport15get_entity_typeB5cxx11Ev called 2 returned 100% blocks executed 100%
+        2:  180:string DTO_Raport::get_entity_type() const{
+        2:  181:    return entity_type;
+        2:  181-block  0
+call    0 returned 2
+        -:  182:}
+        -:  183:
+function _ZNK10DTO_Raport9get_countEv called 2 returned 100% blocks executed 100%
+        2:  184:int DTO_Raport::get_count() const {
+        2:  185:    return count;
+        2:  185-block  0
+        -:  186:}
+        -:  187:
+function _ZN7Service15generare_raportB5cxx11Ev called 1 returned 100% blocks executed 62%
+        1:  188:map<string, DTO_Raport> Service::generare_raport() {
+        1:  189:    vector<Oferta> all = repo.get_all();
+        1:  189-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  189-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  190:    map<string,DTO_Raport> rezultat;
+        1:  190-block  0
+call    0 returned 1
+        4:  191:    for(const auto & of : all){
+call    0 returned 1
+call    1 returned 1
+        3:  191-block  0
+call    2 returned 3
+call    3 returned 3
+        4:  191-block  1
+call    4 returned 4
+branch  5 taken 3
+branch  6 taken 1 (fallthrough)
+        3:  192:        string aux = of.get_tip();
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        3:  193:        if(rezultat.find(aux) != rezultat.end()){
+        3:  193-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:  193-block  1
+call    4 returned 3
+branch  5 taken 1 (fallthrough)
+branch  6 taken 2
+    $$$$$:  193-block  2
+        1:  194:            rezultat[aux].incrementare();
+        1:  194-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  194-block  1
+call    3 returned 1
+        -:  195:        }
+        -:  196:        else{
+        2:  197:            rezultat.insert({aux, DTO_Raport(aux, 1)});
+        2:  197-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  197-block  1
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+        2:  197-block  2
+call    7 returned 2
+branch  8 taken 2 (fallthrough)
+branch  9 taken 0 (throw)
+        2:  197-block  3
+call   10 returned 2
+call   11 returned 2
+call   12 returned 2
+    $$$$$:  197-block  4
+call   13 never executed
+    $$$$$:  197-block  5
+    $$$$$:  197-block  6
+call   14 never executed
+    $$$$$:  197-block  7
+    $$$$$:  197-block  8
+call   15 never executed
+    $$$$$:  197-block  9
+        -:  198:        }
+        3:  199:    }
+        3:  199-block  0
+call    0 returned 3
+    $$$$$:  199-block  1
+call    1 never executed
+        -:  200:
+        2:  201:    return rezultat;
+        1:  201-block  0
+        1:  201-block  1
+        -:  202:
+        1:  203:}
+        1:  203-block  0
+call    0 returned 1
+    $$$$$:  203-block  1
+call    1 never executed
+    $$$$$:  203-block  2
+call    2 never executed

@@ -1,0 +1,1896 @@
+        -:    0:Source:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/ui.cpp
+        -:    0:Graph:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/ui.cpp.gcno
+        -:    0:Data:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/ui.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "ui.h"
+        -:    2:#include <iostream>
+        -:    3:#include <utility>
+        -:    4:
+        -:    5:using std::cin;
+        -:    6:using std::cout;
+        -:    7:
+        -:    8:
+function _ZN2UI13adauga_ofertaER7Service called 0 returned 0% blocks executed 0%
+    #####:    9:void UI::adauga_oferta(Service& serv) {
+        -:   10:    int id, pret;
+    #####:   11:    string denumire, destinatie, tip;
+    %%%%%:   11-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:   12:    cout << "Introduceti id-ul ofertei: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   13:    cin >> id;
+    %%%%%:   13-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   14:    cout << "Introduceti denumirea ofertei: ";
+    %%%%%:   14-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   15:    cin.get();
+    %%%%%:   15-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   16:    getline(cin, denumire);
+    %%%%%:   16-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   17:    cout << "Introduceti destinatia ofertei: ";
+    %%%%%:   17-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   18:    getline(cin, destinatie);
+    %%%%%:   18-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   19:    cout << "Introduceti tipul ofertei: ";
+    %%%%%:   19-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   20:    getline(cin, tip);
+    %%%%%:   20-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   21:    cout << "Introduceti pretul ofertei: ";
+    %%%%%:   21-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   22:    cin >> pret;
+    %%%%%:   22-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   23:    serv.add_oferta(id, denumire, destinatie, tip, pret);
+    %%%%%:   23-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   24:    cout << "Oferta adaugata cu succes!\n";
+    %%%%%:   24-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   25:}
+    %%%%%:   25-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    $$$$$:   25-block  1
+call    3 never executed
+    $$$$$:   25-block  2
+call    4 never executed
+    $$$$$:   25-block  3
+call    5 never executed
+        -:   26:
+function _ZN2UI13sterge_ofertaER7Service called 0 returned 0% blocks executed 0%
+    #####:   27:void UI::sterge_oferta(Service& serv) {
+        -:   28:    int id;
+    #####:   29:    cout << "Introduceti id-ul ofertei pe care doriti sa o stergeti: ";
+    %%%%%:   29-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   30:    cin >> id;
+    %%%%%:   30-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   31:    serv.delete_oferta(id);
+    %%%%%:   31-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   32:    cout << "Oferta stearsa cu succes!\n";
+    %%%%%:   32-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   33:}
+    %%%%%:   33-block  0
+        -:   34:
+function _ZN2UI15modifica_ofertaER7Service called 0 returned 0% blocks executed 0%
+    #####:   35:void UI::modifica_oferta(Service& serv) {
+        -:   36:    int id, pret;
+    #####:   37:    string denumire, destinatie, tip;
+    %%%%%:   37-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:   38:    cout << "Introduceti id-ul ofertei pe care doriti sa o modificati: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   39:    cin >> id;
+    %%%%%:   39-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   40:    cout << "Introduceti noua denumire a ofertei: ";
+    %%%%%:   40-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   41:    cin.get();
+    %%%%%:   41-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   42:    getline(cin, denumire);
+    %%%%%:   42-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   43:    cout << "Introduceti noua destinatie a ofertei: ";
+    %%%%%:   43-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   44:    cin.get();
+    %%%%%:   44-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   45:    getline(cin, destinatie);
+    %%%%%:   45-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   46:    cout << "Introduceti noul tip al ofertei: ";
+    %%%%%:   46-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   47:    cin.get();
+    %%%%%:   47-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   48:    getline(cin, tip);
+    %%%%%:   48-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   49:    cout << "Introduceti noul pret al ofertei: ";
+    %%%%%:   49-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   50:    cin >> pret;
+    %%%%%:   50-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   51:    serv.update_oferta(id, denumire, destinatie, tip, pret);
+    %%%%%:   51-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   52:    cout << "Oferta modificata cu succes!\n";
+    %%%%%:   52-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   53:}
+    %%%%%:   53-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    $$$$$:   53-block  1
+call    3 never executed
+    $$$$$:   53-block  2
+call    4 never executed
+    $$$$$:   53-block  3
+call    5 never executed
+        -:   54:
+function _ZN2UI15afiseaza_oferteER7Service called 0 returned 0% blocks executed 0%
+    #####:   55:void UI::afiseaza_oferte(Service& serv) {
+    #####:   56:    vector oferte = serv.get_all();
+    %%%%%:   56-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   56-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   57:    if(oferte.empty()) {
+    %%%%%:   57-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   58:        cout << "Nu exista oferte!\n";
+    %%%%%:   58-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   59:        return;
+    %%%%%:   59-block  0
+        -:   60:    }
+    #####:   61:    for (const auto& o : oferte) {
+    %%%%%:   61-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:   61-block  1
+call    2 never executed
+    %%%%%:   61-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   62:        cout <<  o.get_id() << ": "  << " Denumire: " << o.get_denumire() << "/ Destinatie: " << o.get_destinatie() << "/ Tip: " << o.get_tip() << "/ Pret: " << o.get_pret() << "\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   62-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   62-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   62-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   62-block  3
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   62-block  4
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:   62-block  5
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    %%%%%:   62-block  6
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:   62-block  7
+call   24 never executed
+branch 25 never executed
+branch 26 never executed
+    %%%%%:   62-block  8
+call   27 never executed
+branch 28 never executed
+branch 29 never executed
+    %%%%%:   62-block  9
+call   30 never executed
+branch 31 never executed
+branch 32 never executed
+    %%%%%:   62-block 10
+call   33 never executed
+branch 34 never executed
+branch 35 never executed
+    %%%%%:   62-block 11
+call   36 never executed
+branch 37 never executed
+branch 38 never executed
+    %%%%%:   62-block 12
+call   39 never executed
+branch 40 never executed
+branch 41 never executed
+    %%%%%:   62-block 13
+call   42 never executed
+branch 43 never executed
+branch 44 never executed
+    %%%%%:   62-block 14
+call   45 never executed
+branch 46 never executed
+branch 47 never executed
+    %%%%%:   62-block 15
+call   48 never executed
+call   49 never executed
+call   50 never executed
+call   51 never executed
+    $$$$$:   62-block 16
+call   52 never executed
+    $$$$$:   62-block 17
+    $$$$$:   62-block 18
+call   53 never executed
+    $$$$$:   62-block 19
+    $$$$$:   62-block 20
+call   54 never executed
+    $$$$$:   62-block 21
+        -:   63:    }
+    #####:   64:}
+    %%%%%:   64-block  0
+    %%%%%:   64-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   64-block  2
+call    3 never executed
+        -:   65:
+function _ZN2UI31afiseaza_oferte_dupa_destinatieER7Service called 0 returned 0% blocks executed 0%
+    #####:   66:void UI::afiseaza_oferte_dupa_destinatie(Service& serv) {
+    #####:   67:    string dest;
+    %%%%%:   67-block  0
+call    0 never executed
+    #####:   68:    cout << "Introduceti destinatia dupa care doriti sa filtrati ofertele: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   69:    cin.get();
+    %%%%%:   69-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   70:    getline(cin, dest);
+    %%%%%:   70-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   71:    vector oferte = serv.filtrare_oferte_dupa_destinatie(dest);
+    %%%%%:   71-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   72:    if(oferte.empty()) {
+    %%%%%:   72-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   73:        cout << "Nu exista oferte cu destinatia " << dest << "!\n";
+    %%%%%:   73-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   73-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   73-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:   74:        return;
+    %%%%%:   74-block  0
+        -:   75:    }
+    #####:   76:    for (const auto& o : oferte) {
+    %%%%%:   76-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:   76-block  1
+call    2 never executed
+    %%%%%:   76-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   77:        cout <<  o.get_id() << ": "  << " Denumire: " << o.get_denumire() << "/ Destinatie: " << o.get_destinatie() << "/ Tip: " << o.get_tip() << "/ Pret: " << o.get_pret() << "\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   77-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   77-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   77-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   77-block  3
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   77-block  4
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:   77-block  5
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    %%%%%:   77-block  6
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:   77-block  7
+call   24 never executed
+branch 25 never executed
+branch 26 never executed
+    %%%%%:   77-block  8
+call   27 never executed
+branch 28 never executed
+branch 29 never executed
+    %%%%%:   77-block  9
+call   30 never executed
+branch 31 never executed
+branch 32 never executed
+    %%%%%:   77-block 10
+call   33 never executed
+branch 34 never executed
+branch 35 never executed
+    %%%%%:   77-block 11
+call   36 never executed
+branch 37 never executed
+branch 38 never executed
+    %%%%%:   77-block 12
+call   39 never executed
+branch 40 never executed
+branch 41 never executed
+    %%%%%:   77-block 13
+call   42 never executed
+branch 43 never executed
+branch 44 never executed
+    %%%%%:   77-block 14
+call   45 never executed
+branch 46 never executed
+branch 47 never executed
+    %%%%%:   77-block 15
+call   48 never executed
+call   49 never executed
+call   50 never executed
+call   51 never executed
+    $$$$$:   77-block 16
+call   52 never executed
+    $$$$$:   77-block 17
+    $$$$$:   77-block 18
+call   53 never executed
+    $$$$$:   77-block 19
+    $$$$$:   77-block 20
+call   54 never executed
+    $$$$$:   77-block 21
+        -:   78:    }
+    #####:   79:}
+    %%%%%:   79-block  0
+    %%%%%:   79-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   79-block  2
+    %%%%%:   79-block  3
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:   79-block  4
+call    6 never executed
+    $$$$$:   79-block  5
+call    7 never executed
+        -:   80:
+function _ZN2UI25afiseaza_oferte_dupa_pretER7Service called 0 returned 0% blocks executed 0%
+    #####:   81:void UI::afiseaza_oferte_dupa_pret(Service& serv) {
+        -:   82:    int pret;
+    #####:   83:    cout << "Introduceti pretul maxim dupa care doriti sa filtrati ofertele: ";
+    %%%%%:   83-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   84:    cin >> pret;
+    %%%%%:   84-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   85:    vector oferte = serv.filtrare_oferte_dupa_pret(pret);
+    %%%%%:   85-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   86:    if(oferte.empty()) {
+    %%%%%:   86-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   87:        cout << "Nu exista oferte cu pretul mai mic sau egal cu " << pret << "!\n";
+    %%%%%:   87-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   87-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   87-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    #####:   88:        return;
+    %%%%%:   88-block  0
+        -:   89:    }
+    #####:   90:    for (const auto& o : oferte) {
+    %%%%%:   90-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:   90-block  1
+call    2 never executed
+    %%%%%:   90-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   91:        cout <<  o.get_id() << ": "  << " Denumire: " << o.get_denumire() << "/ Destinatie: " << o.get_destinatie() << "/ Tip: " << o.get_tip() << "/ Pret: " << o.get_pret() << "\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   91-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   91-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   91-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   91-block  3
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   91-block  4
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:   91-block  5
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    %%%%%:   91-block  6
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:   91-block  7
+call   24 never executed
+branch 25 never executed
+branch 26 never executed
+    %%%%%:   91-block  8
+call   27 never executed
+branch 28 never executed
+branch 29 never executed
+    %%%%%:   91-block  9
+call   30 never executed
+branch 31 never executed
+branch 32 never executed
+    %%%%%:   91-block 10
+call   33 never executed
+branch 34 never executed
+branch 35 never executed
+    %%%%%:   91-block 11
+call   36 never executed
+branch 37 never executed
+branch 38 never executed
+    %%%%%:   91-block 12
+call   39 never executed
+branch 40 never executed
+branch 41 never executed
+    %%%%%:   91-block 13
+call   42 never executed
+branch 43 never executed
+branch 44 never executed
+    %%%%%:   91-block 14
+call   45 never executed
+branch 46 never executed
+branch 47 never executed
+    %%%%%:   91-block 15
+call   48 never executed
+call   49 never executed
+call   50 never executed
+call   51 never executed
+    $$$$$:   91-block 16
+call   52 never executed
+    $$$$$:   91-block 17
+    $$$$$:   91-block 18
+call   53 never executed
+    $$$$$:   91-block 19
+    $$$$$:   91-block 20
+call   54 never executed
+    $$$$$:   91-block 21
+        -:   92:    }
+    #####:   93:}
+    %%%%%:   93-block  0
+    %%%%%:   93-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:   93-block  2
+call    3 never executed
+        -:   94:
+function _ZN2UI37afiseaza_oferte_sortate_dupa_denumireER7Service called 0 returned 0% blocks executed 0%
+    #####:   95:void UI::afiseaza_oferte_sortate_dupa_denumire(Service &serv) {
+    #####:   96:    vector oferte = serv.sort_dupa_denumire();
+    %%%%%:   96-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   97:    if(oferte.empty()) {
+    %%%%%:   97-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   98:        cout << "Nu exista oferte disponibile! \n";
+    %%%%%:   98-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   99:        return;
+    %%%%%:   99-block  0
+        -:  100:    }
+    #####:  101:    for (const auto& o : oferte) {
+    %%%%%:  101-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  101-block  1
+call    2 never executed
+    %%%%%:  101-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  102:        cout <<  o.get_id() << ": "  << " Denumire: " << o.get_denumire() << "/ Destinatie: " << o.get_destinatie() << "/ Tip: " << o.get_tip() << "/ Pret: " << o.get_pret() << "\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  102-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  102-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  102-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  102-block  3
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  102-block  4
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:  102-block  5
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    %%%%%:  102-block  6
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:  102-block  7
+call   24 never executed
+branch 25 never executed
+branch 26 never executed
+    %%%%%:  102-block  8
+call   27 never executed
+branch 28 never executed
+branch 29 never executed
+    %%%%%:  102-block  9
+call   30 never executed
+branch 31 never executed
+branch 32 never executed
+    %%%%%:  102-block 10
+call   33 never executed
+branch 34 never executed
+branch 35 never executed
+    %%%%%:  102-block 11
+call   36 never executed
+branch 37 never executed
+branch 38 never executed
+    %%%%%:  102-block 12
+call   39 never executed
+branch 40 never executed
+branch 41 never executed
+    %%%%%:  102-block 13
+call   42 never executed
+branch 43 never executed
+branch 44 never executed
+    %%%%%:  102-block 14
+call   45 never executed
+branch 46 never executed
+branch 47 never executed
+    %%%%%:  102-block 15
+call   48 never executed
+call   49 never executed
+call   50 never executed
+call   51 never executed
+    $$$$$:  102-block 16
+call   52 never executed
+    $$$$$:  102-block 17
+    $$$$$:  102-block 18
+call   53 never executed
+    $$$$$:  102-block 19
+    $$$$$:  102-block 20
+call   54 never executed
+    $$$$$:  102-block 21
+        -:  103:    }
+    #####:  104:}
+    %%%%%:  104-block  0
+    %%%%%:  104-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  104-block  2
+call    3 never executed
+        -:  105:
+function _ZN2UI39afiseaza_oferte_sortate_dupa_destinatieER7Service called 0 returned 0% blocks executed 0%
+    #####:  106:void UI::afiseaza_oferte_sortate_dupa_destinatie(Service &serv) {
+    #####:  107:    vector oferte = serv.sort_dupa_destinatie();
+    %%%%%:  107-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  108:    if(oferte.empty()) {
+    %%%%%:  108-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  109:        cout << "Nu exista oferte disponibile! \n";
+    %%%%%:  109-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  110:        return;
+    %%%%%:  110-block  0
+        -:  111:    }
+    #####:  112:    for (const auto& o : oferte) {
+    %%%%%:  112-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  112-block  1
+call    2 never executed
+    %%%%%:  112-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  113:        cout <<  o.get_id() << ": "  << " Denumire: " << o.get_denumire() << "/ Destinatie: " << o.get_destinatie() << "/ Tip: " << o.get_tip() << "/ Pret: " << o.get_pret() << "\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  113-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  113-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  113-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  113-block  3
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  113-block  4
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:  113-block  5
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    %%%%%:  113-block  6
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:  113-block  7
+call   24 never executed
+branch 25 never executed
+branch 26 never executed
+    %%%%%:  113-block  8
+call   27 never executed
+branch 28 never executed
+branch 29 never executed
+    %%%%%:  113-block  9
+call   30 never executed
+branch 31 never executed
+branch 32 never executed
+    %%%%%:  113-block 10
+call   33 never executed
+branch 34 never executed
+branch 35 never executed
+    %%%%%:  113-block 11
+call   36 never executed
+branch 37 never executed
+branch 38 never executed
+    %%%%%:  113-block 12
+call   39 never executed
+branch 40 never executed
+branch 41 never executed
+    %%%%%:  113-block 13
+call   42 never executed
+branch 43 never executed
+branch 44 never executed
+    %%%%%:  113-block 14
+call   45 never executed
+branch 46 never executed
+branch 47 never executed
+    %%%%%:  113-block 15
+call   48 never executed
+call   49 never executed
+call   50 never executed
+call   51 never executed
+    $$$$$:  113-block 16
+call   52 never executed
+    $$$$$:  113-block 17
+    $$$$$:  113-block 18
+call   53 never executed
+    $$$$$:  113-block 19
+    $$$$$:  113-block 20
+call   54 never executed
+    $$$$$:  113-block 21
+        -:  114:    }
+    #####:  115:}
+    %%%%%:  115-block  0
+    %%%%%:  115-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  115-block  2
+call    3 never executed
+        -:  116:
+function _ZN2UI40afiseaza_oferte_sortate_dupa_tip_si_pretER7Service called 0 returned 0% blocks executed 0%
+    #####:  117:void UI::afiseaza_oferte_sortate_dupa_tip_si_pret(Service &serv) {
+    #####:  118:    vector oferte = serv.sort_dupa_tip_si_pret();
+    %%%%%:  118-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  119:    if(oferte.empty()) {
+    %%%%%:  119-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  120:        cout << "Nu exista oferte disponibile! \n";
+    %%%%%:  120-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  121:        return;
+    %%%%%:  121-block  0
+        -:  122:    }
+    #####:  123:    for (const auto& o : oferte) {
+    %%%%%:  123-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  123-block  1
+call    2 never executed
+    %%%%%:  123-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  124:        cout <<  o.get_id() << ": "  << " Denumire: " << o.get_denumire() << "/ Destinatie: " << o.get_destinatie() << "/ Tip: " << o.get_tip() << "/ Pret: " << o.get_pret() << "\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  124-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  124-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  124-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  124-block  3
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  124-block  4
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:  124-block  5
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    %%%%%:  124-block  6
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:  124-block  7
+call   24 never executed
+branch 25 never executed
+branch 26 never executed
+    %%%%%:  124-block  8
+call   27 never executed
+branch 28 never executed
+branch 29 never executed
+    %%%%%:  124-block  9
+call   30 never executed
+branch 31 never executed
+branch 32 never executed
+    %%%%%:  124-block 10
+call   33 never executed
+branch 34 never executed
+branch 35 never executed
+    %%%%%:  124-block 11
+call   36 never executed
+branch 37 never executed
+branch 38 never executed
+    %%%%%:  124-block 12
+call   39 never executed
+branch 40 never executed
+branch 41 never executed
+    %%%%%:  124-block 13
+call   42 never executed
+branch 43 never executed
+branch 44 never executed
+    %%%%%:  124-block 14
+call   45 never executed
+branch 46 never executed
+branch 47 never executed
+    %%%%%:  124-block 15
+call   48 never executed
+call   49 never executed
+call   50 never executed
+call   51 never executed
+    $$$$$:  124-block 16
+call   52 never executed
+    $$$$$:  124-block 17
+    $$$$$:  124-block 18
+call   53 never executed
+    $$$$$:  124-block 19
+    $$$$$:  124-block 20
+call   54 never executed
+    $$$$$:  124-block 21
+        -:  125:    }
+    #####:  126:}
+    %%%%%:  126-block  0
+    %%%%%:  126-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  126-block  2
+call    3 never executed
+        -:  127:
+function _ZN2UI31afiseaza_oferta_dupa_destinatieER7Service called 0 returned 0% blocks executed 0%
+    #####:  128:void UI::afiseaza_oferta_dupa_destinatie(Service &serv) {
+    #####:  129:    string dest;
+    %%%%%:  129-block  0
+call    0 never executed
+    #####:  130:    cout << "Introduceti destinatia dupa care doriti sa cautati: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  131:    cin.get();
+    %%%%%:  131-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  132:    getline(cin, dest);
+    %%%%%:  132-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  133:    Oferta o = serv.cauta_dupa_destinatie(dest);
+    %%%%%:  133-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  134:    cout <<  o.get_id() << ": "  << " Denumire: " << o.get_denumire() << "/ Destinatie: " << o.get_destinatie() << "/ Tip: " << o.get_tip() << "/ Pret: " << o.get_pret() << "\n";
+    %%%%%:  134-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  134-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  134-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  134-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  134-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  134-block  5
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:  134-block  6
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    %%%%%:  134-block  7
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:  134-block  8
+call   24 never executed
+branch 25 never executed
+branch 26 never executed
+    %%%%%:  134-block  9
+call   27 never executed
+branch 28 never executed
+branch 29 never executed
+    %%%%%:  134-block 10
+call   30 never executed
+branch 31 never executed
+branch 32 never executed
+    %%%%%:  134-block 11
+call   33 never executed
+branch 34 never executed
+branch 35 never executed
+    %%%%%:  134-block 12
+call   36 never executed
+branch 37 never executed
+branch 38 never executed
+    %%%%%:  134-block 13
+call   39 never executed
+branch 40 never executed
+branch 41 never executed
+    %%%%%:  134-block 14
+call   42 never executed
+branch 43 never executed
+branch 44 never executed
+    %%%%%:  134-block 15
+call   45 never executed
+branch 46 never executed
+branch 47 never executed
+    %%%%%:  134-block 16
+call   48 never executed
+call   49 never executed
+call   50 never executed
+    $$$$$:  134-block 17
+call   51 never executed
+    $$$$$:  134-block 18
+    $$$$$:  134-block 19
+call   52 never executed
+    $$$$$:  134-block 20
+    $$$$$:  134-block 21
+call   53 never executed
+    $$$$$:  134-block 22
+    #####:  135:}
+call    0 never executed
+call    1 never executed
+    $$$$$:  135-block  0
+call    2 never executed
+    $$$$$:  135-block  1
+call    3 never executed
+        -:  136:
+function _ZN2UI18adauga_in_wishlistER7Service called 0 returned 0% blocks executed 0%
+    #####:  137:void UI::adauga_in_wishlist(Service &serv) {
+    #####:  138:    string denum;
+    %%%%%:  138-block  0
+call    0 never executed
+    #####:  139:    cout << "Introduceti denumirea dupa care doriti sa adaugati in wishlist: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  140:    cin.get();
+    %%%%%:  140-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  141:    getline(cin, denum);
+    %%%%%:  141-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  142:    serv.add_wishlist_dupa_denumire(denum);
+    %%%%%:  142-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  142-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  142-block  2
+call    6 never executed
+    $$$$$:  142-block  3
+call    7 never executed
+    $$$$$:  142-block  4
+    #####:  143:    cout << "Adaugare reusita!\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  144:}
+    %%%%%:  144-block  0
+call    0 never executed
+    $$$$$:  144-block  1
+call    1 never executed
+        -:  145:
+function _ZN2UI16goleste_wishlistER7Service called 0 returned 0% blocks executed 0%
+    #####:  146:void UI::goleste_wishlist(Service &serv) {
+    #####:  147:    serv.sterge_wishlist();
+    %%%%%:  147-block  0
+call    0 never executed
+    #####:  148:    cout << "Stergere reusita!\n";
+call    0 never executed
+    #####:  149:}
+        -:  150:
+function _ZN2UI23genereaza_oferte_randomER7Service called 0 returned 0% blocks executed 0%
+    #####:  151:void UI::genereaza_oferte_random(Service &serv) {
+        -:  152:    int numar;
+    #####:  153:    cout << "Dati un numar de cate oferte sa se adauge in wishlist: ";
+    %%%%%:  153-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  154:    cin >> numar;
+    %%%%%:  154-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  155:    serv.genereaza_random_oferte_wishlist(numar);
+    %%%%%:  155-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  156:    cout << "Adaugare reusita!\n";
+    %%%%%:  156-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  157:}
+    %%%%%:  157-block  0
+        -:  158:
+function _ZN2UI17afiseaza_wishlistER7Service called 0 returned 0% blocks executed 0%
+    #####:  159:void UI::afiseaza_wishlist(Service &serv) {
+    #####:  160:    vector<Oferta> oferte = serv.returneaza_wishlist();
+    %%%%%:  160-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  160-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  161:    cout << "Wishlistul: \n";
+    %%%%%:  161-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  162:    for (const auto& o : oferte) {
+    %%%%%:  162-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  162-block  1
+call    2 never executed
+    %%%%%:  162-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  163:        cout <<  o.get_id() << ": "  << " Denumire: " << o.get_denumire() << "/ Destinatie: " << o.get_destinatie() << "/ Tip: " << o.get_tip() << "/ Pret: " << o.get_pret() << "\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  163-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  163-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  163-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  163-block  3
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  163-block  4
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:  163-block  5
+call   18 never executed
+branch 19 never executed
+branch 20 never executed
+    %%%%%:  163-block  6
+call   21 never executed
+branch 22 never executed
+branch 23 never executed
+    %%%%%:  163-block  7
+call   24 never executed
+branch 25 never executed
+branch 26 never executed
+    %%%%%:  163-block  8
+call   27 never executed
+branch 28 never executed
+branch 29 never executed
+    %%%%%:  163-block  9
+call   30 never executed
+branch 31 never executed
+branch 32 never executed
+    %%%%%:  163-block 10
+call   33 never executed
+branch 34 never executed
+branch 35 never executed
+    %%%%%:  163-block 11
+call   36 never executed
+branch 37 never executed
+branch 38 never executed
+    %%%%%:  163-block 12
+call   39 never executed
+branch 40 never executed
+branch 41 never executed
+    %%%%%:  163-block 13
+call   42 never executed
+branch 43 never executed
+branch 44 never executed
+    %%%%%:  163-block 14
+call   45 never executed
+branch 46 never executed
+branch 47 never executed
+    %%%%%:  163-block 15
+call   48 never executed
+call   49 never executed
+call   50 never executed
+call   51 never executed
+    $$$$$:  163-block 16
+call   52 never executed
+    $$$$$:  163-block 17
+    $$$$$:  163-block 18
+call   53 never executed
+    $$$$$:  163-block 19
+    $$$$$:  163-block 20
+call   54 never executed
+    $$$$$:  163-block 21
+        -:  164:    }
+    #####:  165:}
+    %%%%%:  165-block  0
+call    0 never executed
+    $$$$$:  165-block  1
+call    1 never executed
+        -:  166:
+function _ZN2UI9exportareER7Service called 0 returned 0% blocks executed 0%
+    #####:  167:void UI::exportare(Service &serv) {
+    #####:  168:    string nume;
+    %%%%%:  168-block  0
+call    0 never executed
+    #####:  169:    cout << "Dati numele fisierului unde doriti sa se faca export: ";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  170:    cin.get();
+    %%%%%:  170-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  171:    getline(cin, nume);
+    %%%%%:  171-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  172:    serv.exporta(nume);
+    %%%%%:  172-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  172-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  172-block  2
+call    6 never executed
+    $$$$$:  172-block  3
+call    7 never executed
+    $$$$$:  172-block  4
+    #####:  173:}
+call    0 never executed
+    $$$$$:  173-block  0
+call    1 never executed
+        -:  174:
+function _ZN2UI11UI_wishlistEv called 0 returned 0% blocks executed 0%
+    #####:  175:void UI::UI_wishlist() {
+        -:  176:    while(true){
+    #####:  177:        afiseaza_wishlist(service);
+    %%%%%:  177-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  178:        cout << "1. Adauga in wishlist oferta dupa denumire \n";
+    %%%%%:  178-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  179:        cout << "2. Goleste wishlist \n";
+    %%%%%:  179-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  180:        cout << "3. Generare wishlist \n";
+    %%%%%:  180-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  181:        cout << "4. Export \n";
+    %%%%%:  181-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  182:        cout << "5. Inapoi \n";
+    %%%%%:  182-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  183:        cout << "Introduceti optiunea: ";
+    %%%%%:  183-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  184:        int optiune;
+    #####:  185:        cin >> optiune;
+    %%%%%:  185-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  186:        try{
+    #####:  187:            switch (optiune) {
+    %%%%%:  187-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  188:                case 1:
+    #####:  189:                    adauga_in_wishlist(service);
+    %%%%%:  189-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  190:                    break;
+    %%%%%:  190-block  0
+    #####:  191:                case 2:
+    #####:  192:                    goleste_wishlist(service);
+    %%%%%:  192-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  193:                    break;
+    %%%%%:  193-block  0
+    #####:  194:                case 3:
+    #####:  195:                    genereaza_oferte_random(service);
+    %%%%%:  195-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  196:                    break;
+    %%%%%:  196-block  0
+    #####:  197:                case 4:
+    #####:  198:                    exportare(service);
+    %%%%%:  198-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  199:                    break;
+    %%%%%:  199-block  0
+    #####:  200:                case 5:
+    #####:  201:                    return;
+    %%%%%:  201-block  0
+    %%%%%:  201-block  1
+    #####:  202:                default:
+    #####:  203:                    cout << "Optiune invalida\n";
+    %%%%%:  203-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  204:            }
+        -:  205:        }
+    =====:  206:        catch (ValidatorException& e) {
+    $$$$$:  206-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+    $$$$$:  206-block  1
+call    5 never executed
+    =====:  207:            cout << e.get_msg() << "\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  207-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  207-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  207-block  2
+call    9 never executed
+    $$$$$:  207-block  3
+call   10 never executed
+    $$$$$:  207-block  4
+    =====:  208:        }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  208-block  0
+call    3 never executed
+    =====:  209:        catch (RepoException& e) {
+    $$$$$:  209-block  0
+call    0 never executed
+    =====:  210:            cout << e.get_msg() << "\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  210-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  210-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  210-block  2
+call    9 never executed
+    $$$$$:  210-block  3
+call   10 never executed
+    $$$$$:  210-block  4
+    =====:  211:        }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  211-block  0
+call    3 never executed
+    =====:  212:        catch (ServiceException& e) {
+    $$$$$:  212-block  0
+call    0 never executed
+    =====:  213:            cout << e.get_msg() << "\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  213-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  213-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  213-block  2
+call    9 never executed
+    $$$$$:  213-block  3
+call   10 never executed
+    $$$$$:  213-block  4
+    =====:  214:        }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  214-block  0
+call    3 never executed
+    =====:  215:        catch (const std::exception &e){
+    $$$$$:  215-block  0
+call    0 never executed
+    =====:  216:            cout <<e.what();
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    =====:  217:        }
+    $$$$$:  217-block  0
+call    0 never executed
+    $$$$$:  217-block  1
+call    1 never executed
+    #####:  218:    }
+    %%%%%:  218-block  0
+        -:  219:}
+        -:  220:
+function _ZN2UI15genereaza_rapotER7Service called 0 returned 0% blocks executed 0%
+    #####:  221:void UI::genereaza_rapot(Service &serv) {
+    #####:  222:    std::map<string,DTO_Raport> raport = serv.generare_raport();
+    %%%%%:  222-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  223:    for(const auto & pair : raport){
+    %%%%%:  223-block  0
+call    0 never executed
+call    1 never executed
+    %%%%%:  223-block  1
+call    2 never executed
+    %%%%%:  223-block  2
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  224:        cout << pair.second.get_entity_type() << ": " << pair.second.get_count() <<" oferte disponibile!\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  224-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:  224-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:  224-block  2
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:  224-block  3
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:  224-block  4
+call   15 never executed
+branch 16 never executed
+branch 17 never executed
+    %%%%%:  224-block  5
+call   18 never executed
+call   19 never executed
+    $$$$$:  224-block  6
+call   20 never executed
+    $$$$$:  224-block  7
+        -:  225:    }
+    #####:  226:}
+    %%%%%:  226-block  0
+call    0 never executed
+    $$$$$:  226-block  1
+call    1 never executed
+        -:  227:
+function _ZN2UI3runEv called 1 returned 100% blocks executed 22%
+        1:  228:void UI::run() {
+        -:  229:    while (true) {
+        1:  230:        cout << "1. Adauga oferta\n";
+        1:  230-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  231:        cout << "2. Sterge oferta\n";
+        1:  231-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  232:        cout << "3. Modifica oferta\n";
+        1:  232-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  233:        cout << "4. Afiseaza oferte\n";
+        1:  233-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  234:        cout << "5. Filtreaza oferte dupa destinatie\n";
+        1:  234-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  235:        cout << "6. Filtreaza oferte dupa pret\n";
+        1:  235-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  236:        cout << "7. Sorteaza oferte dupa denumire\n";
+        1:  236-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  237:        cout << "8. Sorteaza oferte dupa destinatie\n";
+        1:  237-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  238:        cout << "9. Sorteaza oferte dupa tip si pret\n";
+        1:  238-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  239:        cout << "10. Cauta oferta dupa destinatie\n";
+        1:  239-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  240:        cout << "11. Meniu wishlist\n";
+        1:  240-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  241:        cout << "12. Generare Raport\n";
+        1:  241-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  242:        cout << "13.Undo\n";
+        1:  242-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  243:        cout << "14. Exit\n";
+        1:  243-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  244:        cout << "Introduceti optiunea: ";
+        1:  244-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  245:        int optiune;
+        1:  246:        cin >> optiune;
+        1:  246-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  247:        try {
+        1:  248:            switch (optiune) {
+        1:  248-block  0
+branch  0 taken 0
+branch  1 taken 0
+branch  2 taken 0
+branch  3 taken 0
+branch  4 taken 0
+branch  5 taken 0
+branch  6 taken 0
+branch  7 taken 0
+branch  8 taken 0
+branch  9 taken 0
+branch 10 taken 0
+branch 11 taken 0
+branch 12 taken 0
+branch 13 taken 1
+branch 14 taken 0
+    #####:  249:                case 1:
+    #####:  250:                    adauga_oferta(service);
+    %%%%%:  250-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  251:                    break;
+    %%%%%:  251-block  0
+    #####:  252:                case 2:
+    #####:  253:                    sterge_oferta(service);
+    %%%%%:  253-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  254:                    break;
+    %%%%%:  254-block  0
+    #####:  255:                case 3:
+    #####:  256:                    modifica_oferta(service);
+    %%%%%:  256-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  257:                    break;
+    %%%%%:  257-block  0
+    #####:  258:                case 4:
+    #####:  259:                    afiseaza_oferte(service);
+    %%%%%:  259-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  260:                    break;
+    %%%%%:  260-block  0
+    #####:  261:                case 5:
+    #####:  262:                    afiseaza_oferte_dupa_destinatie(service);
+    %%%%%:  262-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  263:                    break;
+    %%%%%:  263-block  0
+    #####:  264:                case 6:
+    #####:  265:                    afiseaza_oferte_dupa_pret(service);
+    %%%%%:  265-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  266:                    break;
+    %%%%%:  266-block  0
+    #####:  267:                case 7:
+    #####:  268:                    afiseaza_oferte_sortate_dupa_denumire(service);
+    %%%%%:  268-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  269:                    break;
+    %%%%%:  269-block  0
+    #####:  270:                case 8:
+    #####:  271:                    afiseaza_oferte_sortate_dupa_destinatie(service);
+    %%%%%:  271-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  272:                    break;
+    %%%%%:  272-block  0
+    #####:  273:                case 9:
+    #####:  274:                    afiseaza_oferte_sortate_dupa_tip_si_pret(service);
+    %%%%%:  274-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  275:                    break;
+    %%%%%:  275-block  0
+    #####:  276:                case 10:
+    #####:  277:                    afiseaza_oferta_dupa_destinatie(service);
+    %%%%%:  277-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  278:                    break;
+    %%%%%:  278-block  0
+    #####:  279:                case 11:
+    #####:  280:                    UI_wishlist();
+    %%%%%:  280-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  281:                    break;
+    %%%%%:  281-block  0
+    #####:  282:                case 12:
+    #####:  283:                    genereaza_rapot(service);
+    %%%%%:  283-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  284:                    break;
+    %%%%%:  284-block  0
+    #####:  285:                case 13:
+    #####:  286:                    service.undo();
+    %%%%%:  286-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  287:                    cout << "Undo efectuat!\n";
+    %%%%%:  287-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  288:                    break;
+    %%%%%:  288-block  0
+        1:  289:                case 14:
+        1:  290:                    return;
+        1:  290-block  0
+        1:  290-block  1
+    #####:  291:                default:
+    #####:  292:                    cout << "Optiune invalida\n";
+    %%%%%:  292-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  293:            }
+        -:  294:        }
+    =====:  295:        catch (ValidatorException& e) {
+    $$$$$:  295-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+    $$$$$:  295-block  1
+call    5 never executed
+    =====:  296:            cout << e.get_msg() << "\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  296-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  296-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  296-block  2
+call    9 never executed
+    $$$$$:  296-block  3
+call   10 never executed
+    $$$$$:  296-block  4
+    =====:  297:        }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  297-block  0
+call    3 never executed
+    =====:  298:        catch (RepoException& e) {
+    $$$$$:  298-block  0
+call    0 never executed
+    =====:  299:            cout << e.get_msg() << "\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  299-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  299-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  299-block  2
+call    9 never executed
+    $$$$$:  299-block  3
+call   10 never executed
+    $$$$$:  299-block  4
+    =====:  300:        }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  300-block  0
+call    3 never executed
+    =====:  301:        catch (ServiceException& e) {
+    $$$$$:  301-block  0
+call    0 never executed
+    =====:  302:            cout << e.get_msg() << "\n";
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  302-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:  302-block  1
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    $$$$$:  302-block  2
+call    9 never executed
+    $$$$$:  302-block  3
+call   10 never executed
+    $$$$$:  302-block  4
+    =====:  303:        }
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    $$$$$:  303-block  0
+call    3 never executed
+    =====:  304:        catch (const std::exception &e){
+    $$$$$:  304-block  0
+call    0 never executed
+    =====:  305:            cout <<e.what();
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    =====:  306:        }
+    $$$$$:  306-block  0
+call    0 never executed
+    $$$$$:  306-block  1
+call    1 never executed
+    #####:  307:    }
+    %%%%%:  307-block  0
+        -:  308:}
+        -:  309:
+function _ZN2UIC2ER7Service called 1 returned 100% blocks executed 100%
+        1:  310:UI::UI(Service &serv) :service{serv}{
+        -:  311:
+        1:  312:}

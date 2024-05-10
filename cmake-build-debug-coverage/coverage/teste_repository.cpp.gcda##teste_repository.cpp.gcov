@@ -1,0 +1,1677 @@
+        -:    0:Source:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/teste_repository.cpp
+        -:    0:Graph:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/teste_repository.cpp.gcno
+        -:    0:Data:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/teste_repository.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "teste_repository.h"
+        -:    2:#include "repository.h"
+        -:    3:#include "domain.h"
+        -:    4:#include <cassert>
+        -:    5:
+        -:    6:
+function _Z17test_store_ofertav called 1 returned 100% blocks executed 49%
+        1:    7:void test_store_oferta() {
+        1:    8:    Repo repo;
+        1:    8-block  0
+call    0 returned 1
+        2:    9:    Oferta of1{1, "denumire1", "destinatie1", "tip1", 100};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:    9-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:    9-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:    9-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:    9-block  3
+    $$$$$:    9-block  4
+    $$$$$:    9-block  5
+    $$$$$:    9-block  6
+    $$$$$:    9-block  7
+    $$$$$:    9-block  8
+        1:   10:    repo.store_oferta(of1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   11:    assert(repo.get_all().size() == 1);
+        1:   11-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   11-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   11-block  2
+call    6 never executed
+        2:   12:    Oferta of2{2, "denumire2", "destinatie2", "tip2", 200};
+        1:   12-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   12-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   12-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   12-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   12-block  4
+    $$$$$:   12-block  5
+    $$$$$:   12-block  6
+    $$$$$:   12-block  7
+    $$$$$:   12-block  8
+    $$$$$:   12-block  9
+        1:   13:    repo.store_oferta(of2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   14:    assert(repo.get_all().size() == 2);
+        1:   14-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   14-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   14-block  2
+call    6 never executed
+        -:   15:    try{
+        1:   16:        repo.store_oferta(of1);
+        1:   16-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    #####:   17:        assert(false);
+    %%%%%:   17-block  0
+call    0 never executed
+        1:   18:    }catch(RepoException&){
+        1:   18-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   18-block  1
+call    2 returned 1
+        -:   19:        assert(true);
+        1:   20:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   21:}
+        1:   21-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:   21-block  1
+call    3 never executed
+    $$$$$:   21-block  2
+call    4 never executed
+    $$$$$:   21-block  3
+call    5 never executed
+        -:   22:
+function _Z15test_del_ofertav called 1 returned 100% blocks executed 51%
+        1:   23:void test_del_oferta() {
+        1:   24:    Repo repo;
+        1:   24-block  0
+call    0 returned 1
+        2:   25:    Oferta of1{1, "denumire1", "destinatie1", "tip1", 100};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   25-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   25-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   25-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   25-block  3
+    $$$$$:   25-block  4
+    $$$$$:   25-block  5
+    $$$$$:   25-block  6
+    $$$$$:   25-block  7
+    $$$$$:   25-block  8
+        2:   26:    Oferta of2{2, "denumire2", "destinatie2", "tip2", 200};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   26-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   26-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   26-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   26-block  3
+    $$$$$:   26-block  4
+    $$$$$:   26-block  5
+    $$$$$:   26-block  6
+    $$$$$:   26-block  7
+    $$$$$:   26-block  8
+        1:   27:    repo.store_oferta(of1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   28:    assert(repo.get_all().size() == 1);
+        1:   28-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   28-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   28-block  2
+call    6 never executed
+        1:   29:    repo.del_oferta(1);
+        1:   29-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   29-block  1
+call    3 returned 1
+    $$$$$:   29-block  2
+       1*:   30:    assert(repo.get_all().empty() == true);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   30-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   30-block  1
+call    6 never executed
+        -:   31:    try{
+       1*:   32:        repo.del_oferta(1);
+        1:   32-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    %%%%%:   32-block  1
+call    3 never executed
+        1:   32-block  2
+    #####:   33:        assert(false);
+call    0 never executed
+        1:   34:    }catch(RepoException&){
+        1:   34-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   34-block  1
+call    2 returned 1
+        -:   35:        assert(true);
+        1:   36:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   37:    repo.store_oferta(of1);
+        1:   37-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   38:    repo.store_oferta(of2);
+        1:   38-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   39:    repo.del_oferta(2);
+        1:   39-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   39-block  1
+call    3 returned 1
+    $$$$$:   39-block  2
+        1:   40:    assert(repo.get_all().size() == 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   40-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:   40-block  1
+call    6 never executed
+        1:   41:}
+        1:   41-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:   41-block  1
+call    3 never executed
+    $$$$$:   41-block  2
+call    4 never executed
+    $$$$$:   41-block  3
+call    5 never executed
+        -:   42:
+function _Z22test_modificare_ofertav called 1 returned 100% blocks executed 57%
+        1:   43:void test_modificare_oferta() {
+        1:   44:    Repo repo;
+        1:   44-block  0
+call    0 returned 1
+        2:   45:    Oferta of1{1, "denumire1", "destinatie1", "tip1", 100};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   45-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   45-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   45-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   45-block  3
+    $$$$$:   45-block  4
+    $$$$$:   45-block  5
+    $$$$$:   45-block  6
+    $$$$$:   45-block  7
+    $$$$$:   45-block  8
+        1:   46:    repo.store_oferta(of1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   47:    assert(repo.get_all().size() == 1);
+        1:   47-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   47-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   47-block  2
+call    6 never executed
+        2:   48:    Oferta of2{1, "denumire2", "destinatie2", "tip2", 200};
+        1:   48-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   48-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   48-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   48-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   48-block  4
+    $$$$$:   48-block  5
+    $$$$$:   48-block  6
+    $$$$$:   48-block  7
+    $$$$$:   48-block  8
+    $$$$$:   48-block  9
+        1:   49:    repo.modificare_oferta(1, of2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   49-block  0
+call    3 returned 1
+    $$$$$:   49-block  1
+       1*:   50:    assert(repo.get_all().size() == 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   50-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   50-block  1
+call    6 never executed
+       1*:   51:    assert(repo.get_all()[0].get_denumire() == "denumire2");
+        1:   51-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   51-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   51-block  2
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   51-block  3
+call   10 never executed
+        1:   51-block  4
+call   11 returned 1
+       1*:   52:    assert(repo.get_all()[0].get_destinatie() == "destinatie2");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   52-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   52-block  1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   52-block  2
+call   10 never executed
+        1:   52-block  3
+call   11 returned 1
+       1*:   53:    assert(repo.get_all()[0].get_tip() == "tip2");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   53-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   53-block  1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   53-block  2
+call   10 never executed
+        1:   53-block  3
+call   11 returned 1
+       1*:   54:    assert(repo.get_all()[0].get_pret() == 200);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   54-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   54-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:   54-block  2
+call    9 never executed
+        -:   55:    try{
+       1*:   56:        repo.modificare_oferta(0, of2);
+        1:   56-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    %%%%%:   56-block  1
+call    3 never executed
+        1:   56-block  2
+    #####:   57:        assert(false);
+call    0 never executed
+        1:   58:    }catch(RepoException&){
+        1:   58-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:   58-block  1
+call    2 returned 1
+        -:   59:        assert(true);
+        1:   60:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   61:}
+        1:   61-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:   61-block  1
+call    3 never executed
+    $$$$$:   61-block  2
+call    4 never executed
+    $$$$$:   61-block  3
+call    5 never executed
+        -:   62:
+function _Z12test_get_allv called 1 returned 100% blocks executed 51%
+        1:   63:void test_get_all() {
+        1:   64:    Repo repo;
+        1:   64-block  0
+call    0 returned 1
+        2:   65:    Oferta of1{1, "denumire1", "destinatie1", "tip1", 100};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   65-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   65-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   65-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   65-block  3
+    $$$$$:   65-block  4
+    $$$$$:   65-block  5
+    $$$$$:   65-block  6
+    $$$$$:   65-block  7
+    $$$$$:   65-block  8
+        1:   66:    repo.store_oferta(of1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   67:    assert(repo.get_all().size() == 1);
+        1:   67-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   67-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   67-block  2
+call    6 never executed
+        2:   68:    Oferta of2{2, "denumire2", "destinatie2", "tip2", 200};
+        1:   68-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   68-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   68-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   68-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   68-block  4
+    $$$$$:   68-block  5
+    $$$$$:   68-block  6
+    $$$$$:   68-block  7
+    $$$$$:   68-block  8
+    $$$$$:   68-block  9
+        1:   69:    repo.store_oferta(of2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   70:    assert(repo.get_all().size() == 2);
+        1:   70-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   70-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   70-block  2
+call    6 never executed
+        1:   71:    vector oferte = repo.get_all();
+        1:   71-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   71-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+       1*:   72:    assert(oferte[0] == of1);
+        1:   72-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   72-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   72-block  2
+call    6 never executed
+       1*:   73:    assert(oferte[1] == of2);
+        1:   73-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   73-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   73-block  2
+call    6 never executed
+        1:   74:}
+        1:   74-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:   74-block  1
+call    4 never executed
+    $$$$$:   74-block  2
+call    5 never executed
+    $$$$$:   74-block  3
+call    6 never executed
+    $$$$$:   74-block  4
+call    7 never executed
+        -:   75:
+        -:   76:
+        -:   77:
+function _Z26test_citire_scriere_fisierv called 1 returned 100% blocks executed 50%
+        1:   78:void test_citire_scriere_fisier(){
+        2:   79:    RepoFisier repo{"test.txt"};
+        1:   79-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   79-block  1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+call    7 returned 1
+    $$$$$:   79-block  2
+    $$$$$:   79-block  3
+       1*:   80:    assert(repo.get_all().empty() == true);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   80-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   80-block  1
+call    6 never executed
+        1:   81:    repo.store_oferta(Oferta(1, "denumire1", "destinatie1", "tip1", 100));
+        1:   81-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   81-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   81-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   81-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   81-block  4
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   81-block  5
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+    $$$$$:   81-block  6
+call   25 never executed
+    $$$$$:   81-block  7
+    $$$$$:   81-block  8
+call   26 never executed
+    $$$$$:   81-block  9
+    $$$$$:   81-block 10
+call   27 never executed
+    $$$$$:   81-block 11
+    $$$$$:   81-block 12
+call   28 never executed
+    $$$$$:   81-block 13
+    $$$$$:   81-block 14
+call   29 never executed
+    $$$$$:   81-block 15
+    $$$$$:   81-block 16
+call   30 never executed
+    $$$$$:   81-block 17
+    $$$$$:   81-block 18
+call   31 never executed
+    $$$$$:   81-block 19
+       1*:   82:    assert(repo.get_all().size() == 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   82-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   82-block  1
+call    6 never executed
+        1:   83:    repo.modificare_oferta(1, Oferta(1,"denumire", "destinatie", "tip", 50));
+        1:   83-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   83-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   83-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   83-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+        1:   83-block  4
+call   15 returned 1
+branch 16 taken 1 (fallthrough)
+branch 17 taken 0 (throw)
+        1:   83-block  5
+call   18 returned 1
+call   19 returned 1
+call   20 returned 1
+call   21 returned 1
+call   22 returned 1
+call   23 returned 1
+call   24 returned 1
+call   25 returned 1
+    $$$$$:   83-block  6
+    $$$$$:   83-block  7
+call   26 never executed
+    $$$$$:   83-block  8
+    $$$$$:   83-block  9
+call   27 never executed
+    $$$$$:   83-block 10
+    $$$$$:   83-block 11
+call   28 never executed
+    $$$$$:   83-block 12
+    $$$$$:   83-block 13
+call   29 never executed
+    $$$$$:   83-block 14
+    $$$$$:   83-block 15
+call   30 never executed
+    $$$$$:   83-block 16
+    $$$$$:   83-block 17
+call   31 never executed
+    $$$$$:   83-block 18
+    $$$$$:   83-block 19
+call   32 never executed
+    $$$$$:   83-block 20
+       1*:   84:    assert(repo.get_all()[0].get_denumire() == "denumire");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   84-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:   84-block  1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:   84-block  2
+call   10 never executed
+        1:   84-block  3
+call   11 returned 1
+        1:   85:    repo.del_oferta(1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   85-block  0
+call    3 returned 1
+    $$$$$:   85-block  1
+       1*:   86:    assert(repo.get_all().empty() == true);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   86-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   86-block  1
+call    6 never executed
+        1:   87:    repo.del_all_elements();
+        1:   87-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   88:
+        -:   89:
+        1:   90:}
+        1:   90-block  0
+call    0 returned 1
+    $$$$$:   90-block  1
+call    1 never executed
+        -:   91:
+function _Z18test_store_repolabv called 1 returned 100% blocks executed 51%
+        1:   92:void test_store_repolab(){
+        1:   93:    RepoLab repo{-1};
+        1:   93-block  0
+call    0 returned 1
+        2:   94:    Oferta of1{1, "denumire1", "destinatie1", "tip1", 100};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   94-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   94-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   94-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   94-block  3
+    $$$$$:   94-block  4
+    $$$$$:   94-block  5
+    $$$$$:   94-block  6
+    $$$$$:   94-block  7
+    $$$$$:   94-block  8
+        1:   95:    repo.store_oferta(of1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   96:    assert(repo.get_all().size() == 1);
+        1:   96-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   96-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   96-block  2
+call    6 never executed
+        2:   97:    Oferta of2{2, "denumire2", "destinatie2", "tip2", 200};
+        1:   97-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:   97-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:   97-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:   97-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:   97-block  4
+    $$$$$:   97-block  5
+    $$$$$:   97-block  6
+    $$$$$:   97-block  7
+    $$$$$:   97-block  8
+    $$$$$:   97-block  9
+        1:   98:    repo.store_oferta(of2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:   99:    assert(repo.get_all().size() == 2);
+        1:   99-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   99-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:   99-block  2
+call    6 never executed
+        -:  100:    try{
+        1:  101:        repo.store_oferta(of1);
+        1:  101-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    #####:  102:        assert(false);
+    %%%%%:  102-block  0
+call    0 never executed
+        1:  103:    }catch(RepoException&){
+        1:  103-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  103-block  1
+call    2 returned 1
+        -:  104:        assert(true);
+        1:  105:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  106:
+        1:  107:    RepoLab repo1{101};
+        1:  107-block  0
+call    0 returned 1
+        -:  108:    try{
+        1:  109:        repo1.store_oferta(of1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+        1:  110:    }catch (RepoException&){
+        1:  110-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  110-block  1
+call    2 returned 1
+        -:  111:        assert(true);
+        1:  112:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  113:}
+        1:  113-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:  113-block  1
+call    4 never executed
+    $$$$$:  113-block  2
+call    5 never executed
+    $$$$$:  113-block  3
+call    6 never executed
+    $$$$$:  113-block  4
+call    7 never executed
+        -:  114:
+function _Z16test_del_repolabv called 1 returned 100% blocks executed 52%
+        1:  115:void test_del_repolab(){
+        1:  116:    RepoLab repo{-1};
+        1:  116-block  0
+call    0 returned 1
+        2:  117:    Oferta of1{1, "denumire1", "destinatie1", "tip1", 100};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  117-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  117-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  117-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  117-block  3
+    $$$$$:  117-block  4
+    $$$$$:  117-block  5
+    $$$$$:  117-block  6
+    $$$$$:  117-block  7
+    $$$$$:  117-block  8
+        2:  118:    Oferta of2{2, "denumire2", "destinatie2", "tip2", 200};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  118-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  118-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  118-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  118-block  3
+    $$$$$:  118-block  4
+    $$$$$:  118-block  5
+    $$$$$:  118-block  6
+    $$$$$:  118-block  7
+    $$$$$:  118-block  8
+        1:  119:    repo.store_oferta(of1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  120:    assert(repo.get_all().size() == 1);
+        1:  120-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  120-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  120-block  2
+call    6 never executed
+        1:  121:    repo.del_oferta(1);
+        1:  121-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  121-block  1
+call    3 returned 1
+    $$$$$:  121-block  2
+       1*:  122:    assert(repo.get_all().empty() == true);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  122-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  122-block  1
+call    6 never executed
+        -:  123:    try{
+       1*:  124:        repo.del_oferta(1);
+        1:  124-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    %%%%%:  124-block  1
+call    3 never executed
+        1:  124-block  2
+    #####:  125:        assert(false);
+call    0 never executed
+        1:  126:    }catch(RepoException&){
+        1:  126-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  126-block  1
+call    2 returned 1
+        -:  127:        assert(true);
+        1:  128:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  129:    repo.store_oferta(of1);
+        1:  129-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  130:    repo.store_oferta(of2);
+        1:  130-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  131:    repo.del_oferta(2);
+        1:  131-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  131-block  1
+call    3 returned 1
+    $$$$$:  131-block  2
+        1:  132:    assert(repo.get_all().size() == 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  132-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    $$$$$:  132-block  1
+call    6 never executed
+        -:  133:
+        1:  134:    RepoLab repo1{101};
+        1:  134-block  0
+call    0 returned 1
+        -:  135:    try{
+        1:  136:        repo1.del_oferta(1);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    $$$$$:  136-block  0
+call    3 never executed
+        1:  136-block  1
+        1:  137:    }catch (RepoException&){
+        1:  137-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  137-block  1
+call    2 returned 1
+        -:  138:        assert(true);
+        1:  139:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  140:}
+        1:  140-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:  140-block  1
+call    4 never executed
+    $$$$$:  140-block  2
+call    5 never executed
+    $$$$$:  140-block  3
+call    6 never executed
+    $$$$$:  140-block  4
+call    7 never executed
+        -:  141:
+function _Z23test_modificare_repolabv called 1 returned 100% blocks executed 57%
+        1:  142:void test_modificare_repolab(){
+        1:  143:    RepoLab repo{-1};
+        1:  143-block  0
+call    0 returned 1
+        -:  144:
+        2:  145:    Oferta of1{1, "denumire1", "destinatie1", "tip1", 100};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  145-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  145-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  145-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  145-block  3
+    $$$$$:  145-block  4
+    $$$$$:  145-block  5
+    $$$$$:  145-block  6
+    $$$$$:  145-block  7
+    $$$$$:  145-block  8
+        1:  146:    repo.store_oferta(of1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  147:    assert(repo.get_all().size() == 1);
+        1:  147-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  147-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  147-block  2
+call    6 never executed
+        2:  148:    Oferta of2{1, "denumire2", "destinatie2", "tip2", 200};
+        1:  148-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  148-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  148-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  148-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  148-block  4
+    $$$$$:  148-block  5
+    $$$$$:  148-block  6
+    $$$$$:  148-block  7
+    $$$$$:  148-block  8
+    $$$$$:  148-block  9
+        1:  149:    repo.modificare_oferta(1, of2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  149-block  0
+call    3 returned 1
+    $$$$$:  149-block  1
+       1*:  150:    assert(repo.get_all().size() == 1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  150-block  0
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  150-block  1
+call    6 never executed
+       1*:  151:    assert(repo.get_all()[0].get_denumire() == "denumire2");
+        1:  151-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  151-block  1
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  151-block  2
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  151-block  3
+call   10 never executed
+        1:  151-block  4
+call   11 returned 1
+       1*:  152:    assert(repo.get_all()[0].get_destinatie() == "destinatie2");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  152-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  152-block  1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  152-block  2
+call   10 never executed
+        1:  152-block  3
+call   11 returned 1
+       1*:  153:    assert(repo.get_all()[0].get_tip() == "tip2");
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  153-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  153-block  1
+call    7 returned 1
+branch  8 taken 0 (fallthrough)
+branch  9 taken 1
+    %%%%%:  153-block  2
+call   10 never executed
+        1:  153-block  3
+call   11 returned 1
+       1*:  154:    assert(repo.get_all()[0].get_pret() == 200);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  154-block  0
+call    3 returned 1
+call    4 returned 1
+branch  5 taken 1 (fallthrough)
+branch  6 taken 0 (throw)
+        1:  154-block  1
+branch  7 taken 0 (fallthrough)
+branch  8 taken 1
+    %%%%%:  154-block  2
+call    9 never executed
+        -:  155:    try{
+       1*:  156:        repo.modificare_oferta(0, of2);
+        1:  156-block  0
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    %%%%%:  156-block  1
+call    3 never executed
+        1:  156-block  2
+    #####:  157:        assert(false);
+call    0 never executed
+        1:  158:    }catch(RepoException&){
+        1:  158-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  158-block  1
+call    2 returned 1
+        -:  159:        assert(true);
+        1:  160:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  161:
+        -:  162:
+        1:  163:    RepoLab repo1{101};
+        1:  163-block  0
+call    0 returned 1
+        -:  164:    try{
+        1:  165:        repo1.modificare_oferta(0, of2);
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    $$$$$:  165-block  0
+call    3 never executed
+        1:  165-block  1
+        1:  166:    }catch (RepoException&){
+        1:  166-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  166-block  1
+call    2 returned 1
+        -:  167:        assert(true);
+        1:  168:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  169:}
+        1:  169-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+    $$$$$:  169-block  1
+call    4 never executed
+    $$$$$:  169-block  2
+call    5 never executed
+    $$$$$:  169-block  3
+call    6 never executed
+    $$$$$:  169-block  4
+call    7 never executed
+        -:  170:
+function _Z20test_get_all_repolabv called 1 returned 100% blocks executed 51%
+        1:  171:void test_get_all_repolab(){
+        1:  172:    RepoLab repo{-1};
+        1:  172-block  0
+call    0 returned 1
+        2:  173:    Oferta of1{1, "denumire1", "destinatie1", "tip1", 100};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  173-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  173-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  173-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  173-block  3
+    $$$$$:  173-block  4
+    $$$$$:  173-block  5
+    $$$$$:  173-block  6
+    $$$$$:  173-block  7
+    $$$$$:  173-block  8
+        1:  174:    repo.store_oferta(of1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  175:    assert(repo.get_all().size() == 1);
+        1:  175-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  175-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  175-block  2
+call    6 never executed
+        2:  176:    Oferta of2{2, "denumire2", "destinatie2", "tip2", 200};
+        1:  176-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  176-block  1
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  176-block  2
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  176-block  3
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  176-block  4
+    $$$$$:  176-block  5
+    $$$$$:  176-block  6
+    $$$$$:  176-block  7
+    $$$$$:  176-block  8
+    $$$$$:  176-block  9
+        1:  177:    repo.store_oferta(of2);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  178:    assert(repo.get_all().size() == 2);
+        1:  178-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  178-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  178-block  2
+call    6 never executed
+        1:  179:    vector<Oferta> oferte = repo.get_all();
+        1:  179-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  179-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+       1*:  180:    assert(oferte[0] == of2);
+        1:  180-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  180-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  180-block  2
+call    6 never executed
+       1*:  181:    assert(oferte[1] == of1);
+        1:  181-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  181-block  1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  181-block  2
+call    6 never executed
+        -:  182:
+        1:  183:    RepoLab repo1{101};
+        1:  183-block  0
+call    0 returned 1
+        -:  184:    try{
+        1:  185:        repo1.get_all();
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    #####:  186:        assert(false);
+    %%%%%:  186-block  0
+call    0 never executed
+        -:  187:    }
+        1:  188:    catch (RepoException&){
+        1:  188-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  188-block  1
+call    2 returned 1
+        -:  189:        assert(true);
+        1:  190:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  191:}
+        1:  191-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+call    3 returned 1
+call    4 returned 1
+    $$$$$:  191-block  1
+call    5 never executed
+    $$$$$:  191-block  2
+call    6 never executed
+    $$$$$:  191-block  3
+call    7 never executed
+    $$$$$:  191-block  4
+call    8 never executed
+    $$$$$:  191-block  5
+call    9 never executed
+        -:  192:
+function _Z21test_dell_all_repolabv called 1 returned 100% blocks executed 52%
+        1:  193:void test_dell_all_repolab(){
+        1:  194:    RepoLab repo{-1};
+        1:  194-block  0
+call    0 returned 1
+        2:  195:    Oferta of1{1, "denumire1", "destinatie1", "tip1", 100};
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  195-block  0
+call    4 returned 1
+call    5 returned 1
+branch  6 taken 1 (fallthrough)
+branch  7 taken 0 (throw)
+        1:  195-block  1
+call    8 returned 1
+call    9 returned 1
+branch 10 taken 1 (fallthrough)
+branch 11 taken 0 (throw)
+        1:  195-block  2
+call   12 returned 1
+branch 13 taken 1 (fallthrough)
+branch 14 taken 0 (throw)
+call   15 returned 1
+call   16 returned 1
+call   17 returned 1
+call   18 returned 1
+call   19 returned 1
+    $$$$$:  195-block  3
+    $$$$$:  195-block  4
+    $$$$$:  195-block  5
+    $$$$$:  195-block  6
+    $$$$$:  195-block  7
+    $$$$$:  195-block  8
+        1:  196:    repo.store_oferta(of1);
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  197:    repo.del_all_elements();
+        1:  197-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+       1*:  198:    assert(repo.get_all().empty() == true);
+        1:  198-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  198-block  1
+call    3 returned 1
+branch  4 taken 0 (fallthrough)
+branch  5 taken 1
+    %%%%%:  198-block  2
+call    6 never executed
+        -:  199:
+        1:  200:    RepoLab repo1{101};
+        1:  200-block  0
+call    0 returned 1
+        -:  201:    try{
+        1:  202:        repo1.del_all_elements();
+call    0 returned 1
+branch  1 taken 0 (fallthrough)
+branch  2 taken 1 (throw)
+    #####:  203:        assert(false);
+    %%%%%:  203-block  0
+call    0 never executed
+        -:  204:    }
+        1:  205:    catch (RepoException&){
+        1:  205-block  0
+branch  0 taken 0 (fallthrough)
+branch  1 taken 1
+        1:  205-block  1
+call    2 returned 1
+        -:  206:        assert(true);
+        1:  207:    }
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  208:}
+        1:  208-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+    $$$$$:  208-block  1
+call    3 never executed
+    $$$$$:  208-block  2
+call    4 never executed
+    $$$$$:  208-block  3
+call    5 never executed
+        -:  209:
+function _Z10teste_repov called 1 returned 100% blocks executed 100%
+        1:  210:void teste_repo() {
+        1:  211:    test_store_oferta();
+        1:  211-block  0
+call    0 returned 1
+        1:  212:    test_del_oferta();
+call    0 returned 1
+        1:  213:    test_modificare_oferta();
+call    0 returned 1
+        1:  214:    test_get_all();
+call    0 returned 1
+        1:  215:    test_citire_scriere_fisier();
+call    0 returned 1
+        1:  216:    test_store_repolab();
+call    0 returned 1
+        1:  217:    test_del_repolab();
+call    0 returned 1
+        1:  218:    test_modificare_repolab();
+call    0 returned 1
+        1:  219:    test_get_all_repolab();
+call    0 returned 1
+        1:  220:    test_dell_all_repolab();
+call    0 returned 1
+        1:  221:}

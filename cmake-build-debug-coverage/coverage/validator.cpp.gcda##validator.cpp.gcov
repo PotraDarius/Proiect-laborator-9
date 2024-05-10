@@ -1,0 +1,123 @@
+        -:    0:Source:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/validator.cpp
+        -:    0:Graph:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/validator.cpp.gcno
+        -:    0:Data:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/validator.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "validator.h"
+        -:    2:
+function _ZNK9Validator15validare_ofertaERK6Oferta called 51 returned 86% blocks executed 82%
+       51:    3:bool Validator::validare_oferta(const Oferta &of) const {
+       51:    4:    string err = "";
+       51:    4-block  0
+call    0 returned 51
+call    1 returned 51
+branch  2 taken 51 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:    4-block  1
+       51:    5:    if(of.get_id() < 0){
+call    0 returned 51
+branch  1 taken 51 (fallthrough)
+branch  2 taken 0 (throw)
+       51:    5-block  0
+branch  3 taken 1 (fallthrough)
+branch  4 taken 50
+        1:    6:        err += "Id invalid!\n";
+        1:    6-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        -:    7:    }
+       51:    8:    if(of.get_denumire().empty()){
+       51:    8-block  0
+call    0 returned 51
+branch  1 taken 51 (fallthrough)
+branch  2 taken 0 (throw)
+       51:    8-block  1
+call    3 returned 51
+call    4 returned 51
+branch  5 taken 3 (fallthrough)
+branch  6 taken 48
+        3:    9:        err += "Denumire invalida!\n";
+        3:    9-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   10:    }
+       51:   11:    if(of.get_destinatie().empty()){
+       51:   11-block  0
+call    0 returned 51
+branch  1 taken 51 (fallthrough)
+branch  2 taken 0 (throw)
+       51:   11-block  1
+call    3 returned 51
+call    4 returned 51
+branch  5 taken 3 (fallthrough)
+branch  6 taken 48
+        3:   12:        err += "Destinatie invalida!\n";
+        3:   12-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   13:    }
+       51:   14:    if(of.get_tip().empty()){
+       51:   14-block  0
+call    0 returned 51
+branch  1 taken 51 (fallthrough)
+branch  2 taken 0 (throw)
+       51:   14-block  1
+call    3 returned 51
+call    4 returned 51
+branch  5 taken 3 (fallthrough)
+branch  6 taken 48
+        3:   15:        err += "Tip invalid!\n";
+        3:   15-block  0
+call    0 returned 3
+branch  1 taken 3 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   16:    }
+       51:   17:    if(of.get_pret() < 0){
+       51:   17-block  0
+call    0 returned 51
+branch  1 taken 51 (fallthrough)
+branch  2 taken 0 (throw)
+       51:   17-block  1
+branch  3 taken 2 (fallthrough)
+branch  4 taken 49
+        2:   18:        err += "Pret invalid!\n";
+        2:   18-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   19:    }
+       51:   20:    if(!err.empty()){
+       51:   20-block  0
+call    0 returned 51
+branch  1 taken 7 (fallthrough)
+branch  2 taken 44
+        7:   21:        throw ValidatorException(err);
+        7:   21-block  0
+call    0 returned 7
+call    1 returned 7
+branch  2 taken 7 (fallthrough)
+branch  3 taken 0 (throw)
+        7:   21-block  1
+call    4 returned 7
+branch  5 taken 7 (fallthrough)
+branch  6 taken 0 (throw)
+        7:   21-block  2
+call    7 returned 7
+call    8 returned 7
+    $$$$$:   21-block  3
+call    9 never executed
+    $$$$$:   21-block  4
+    $$$$$:   21-block  5
+call   10 never executed
+        -:   22:    }
+       44:   23:    return true;
+       44:   23-block  0
+       51:   24:}
+       44:   24-block  0
+call    0 returned 44
+        7:   24-block  1
+call    1 returned 7
+        -:   25:
+        -:   26:

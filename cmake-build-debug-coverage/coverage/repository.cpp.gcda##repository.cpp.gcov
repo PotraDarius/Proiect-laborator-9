@@ -1,0 +1,817 @@
+        -:    0:Source:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/repository.cpp
+        -:    0:Graph:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/repository.cpp.gcno
+        -:    0:Data:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/repository.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include "repository.h"
+        -:    2:#include <algorithm>
+        -:    3:#include <fstream>
+        -:    4:#include <cstring>
+        -:    5:#include <sstream>
+        -:    6:
+        -:    7:using std::find_if;
+        -:    8:using std::stringstream;
+        -:    9:
+function _ZN4Repo12store_ofertaERK6Oferta called 51 returned 96% blocks executed 76%
+       51:   10:void Repo::store_oferta(const Oferta &of) {
+        -:   11:    /*for(const Oferta& of1: this->oferte){
+        -:   12:        if(of1 == of){
+        -:   13:            throw RepoException("Oferta exista deja!");
+        -:   14:        }
+        -:   15:    }*/
+       51:   16:    auto it = find_if(oferte.begin(), oferte.end(),
+       51:   16-block  0
+call    0 returned 51
+call    1 returned 51
+call    2 returned 51
+branch  3 taken 51 (fallthrough)
+branch  4 taken 0 (throw)
+function _ZZN4Repo12store_ofertaERK6OfertaENKUlS2_E_clES2_ called 38 returned 100% blocks executed 100%
+       38:   17:                      [&of](const Oferta &o){ return o == of;});
+       38:   17-block  0
+call    0 returned 38
+       51:   18:    if(it == oferte.end()) {
+       51:   18-block  0
+call    0 returned 51
+call    1 returned 51
+branch  2 taken 49 (fallthrough)
+branch  3 taken 2
+       49:   19:        this->oferte.push_back(of);
+       49:   19-block  0
+call    0 returned 49
+branch  1 taken 49 (fallthrough)
+branch  2 taken 0 (throw)
+        -:   20:    }
+        -:   21:    else{
+        2:   22:        throw RepoException("Oferta exista deja!");
+        2:   22-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:   22-block  1
+call    5 returned 2
+call    6 returned 2
+call    7 returned 2
+call    8 returned 2
+    $$$$$:   22-block  2
+call    9 never executed
+    $$$$$:   22-block  3
+    $$$$$:   22-block  4
+call   10 never executed
+        -:   23:    }
+       49:   24:}
+       49:   24-block  0
+        -:   25:
+function _ZN12RepoWishlist12store_ofertaERK6Oferta called 7 returned 100% blocks executed 100%
+        7:   26:void RepoWishlist::store_oferta(const Oferta &of) {
+        7:   27:    oferte.push_back(of);
+        7:   27-block  0
+call    0 returned 7
+        7:   28:}
+        -:   29:
+function _ZN12RepoWishlist16del_all_elementsEv called 1 returned 100% blocks executed 100%
+        1:   30:void RepoWishlist::del_all_elements() {
+        1:   31:    oferte.clear();
+        1:   31-block  0
+call    0 returned 1
+        1:   32:}
+        -:   33:
+function _ZN12RepoWishlist7get_allEv called 5 returned 100% blocks executed 100%
+        5:   34:vector<Oferta>& RepoWishlist::get_all() {
+        5:   35:    return oferte;
+        5:   35-block  0
+        -:   36:}
+        -:   37:
+function _ZN4Repo10del_ofertaERKi called 8 returned 75% blocks executed 72%
+        8:   38:Oferta Repo::del_oferta(const int &id) {
+        -:   39:    /*int i = 0;
+        -:   40:    for(const Oferta& of: this->oferte){
+        -:   41:        if(of.get_id() == id){
+        -:   42:            this->oferte.erase(oferte.begin() + i);
+        -:   43:            return;
+        -:   44:        }
+        -:   45:        i++;
+        -:   46:    }*/
+        8:   47:    auto it = find_if(oferte.begin(), oferte.end(),
+        8:   47-block  0
+call    0 returned 8
+call    1 returned 8
+call    2 returned 8
+branch  3 taken 8 (fallthrough)
+branch  4 taken 0 (throw)
+function _ZZN4Repo10del_ofertaERKiENKUlRK6OfertaE_clES4_ called 7 returned 100% blocks executed 100%
+        7:   48:                      [&id](const Oferta &o){ return o.get_id() == id;});
+        7:   48-block  0
+call    0 returned 7
+        -:   49:
+        8:   50:    if(it != oferte.end()){
+        8:   50-block  0
+call    0 returned 8
+call    1 returned 8
+branch  2 taken 6 (fallthrough)
+branch  3 taken 2
+        6:   51:        Oferta aux = *it;
+        6:   51-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+        6:   52:        oferte.erase(it);
+        6:   52-block  0
+call    0 returned 6
+call    1 returned 6
+branch  2 taken 6 (fallthrough)
+branch  3 taken 0 (throw)
+    $$$$$:   52-block  1
+       12:   53:        return aux;
+        6:   53-block  0
+call    0 returned 6
+branch  1 taken 6 (fallthrough)
+branch  2 taken 0 (throw)
+        6:   53-block  1
+        6:   54:    }
+        6:   54-block  0
+call    0 returned 6
+    $$$$$:   54-block  1
+call    1 never executed
+        2:   55:    throw RepoException("Nu exista oferta cu acest id!");
+        2:   55-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:   55-block  1
+call    5 returned 2
+call    6 returned 2
+call    7 returned 2
+call    8 returned 2
+    $$$$$:   55-block  2
+call    9 never executed
+    $$$$$:   55-block  3
+    $$$$$:   55-block  4
+call   10 never executed
+        -:   56:}
+        -:   57:
+function _ZN4Repo17modificare_ofertaERKiRK6Oferta called 7 returned 71% blocks executed 74%
+        7:   58:Oferta Repo::modificare_oferta(const int &id, const Oferta &new_of) {
+        9:   59:    for(Oferta& of1: this->oferte){
+        7:   59-block  0
+call    0 returned 7
+call    1 returned 7
+        7:   59-block  1
+call    2 returned 7
+        2:   59-block  2
+call    3 returned 2
+        9:   59-block  3
+call    4 returned 9
+branch  5 taken 7
+branch  6 taken 2 (fallthrough)
+        7:   60:        if(of1.get_id() == id){
+call    0 returned 7
+branch  1 taken 7 (fallthrough)
+branch  2 taken 0 (throw)
+        7:   60-block  0
+branch  3 taken 5 (fallthrough)
+branch  4 taken 2
+        5:   61:            Oferta aux = of1;
+        5:   61-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   62:            of1 = new_of;
+        5:   62-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+       10:   63:            return aux;
+        5:   63-block  0
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:   63-block  1
+        5:   64:        }
+        5:   64-block  0
+call    0 returned 5
+    $$$$$:   64-block  1
+call    1 never executed
+        -:   65:    }
+        2:   66:    throw RepoException("Nu exista oferta cu acest id!");
+        2:   66-block  0
+call    0 returned 2
+call    1 returned 2
+call    2 returned 2
+branch  3 taken 2 (fallthrough)
+branch  4 taken 0 (throw)
+        2:   66-block  1
+call    5 returned 2
+call    6 returned 2
+call    7 returned 2
+call    8 returned 0
+    $$$$$:   66-block  2
+call    9 never executed
+    $$$$$:   66-block  3
+    $$$$$:   66-block  4
+call   10 never executed
+        -:   67:}
+        -:   68:
+function _ZN4Repo7get_allEv called 47 returned 100% blocks executed 100%
+       47:   69:vector<Oferta>& Repo::get_all()  {
+       47:   70:    return oferte;
+       47:   70-block  0
+        -:   71:}
+        -:   72:
+function _ZN4Repo16del_all_elementsEv called 1 returned 100% blocks executed 100%
+        1:   73:void Repo::del_all_elements() {
+        1:   74:    oferte.clear();
+        1:   74-block  0
+call    0 returned 1
+        1:   75:}
+        -:   76:
+        -:   77:
+        -:   78:
+        -:   79:
+function _ZN10RepoFisier14load_from_fileEv called 1 returned 100% blocks executed 18%
+        1:   80:void RepoFisier::load_from_file() {
+        1:   81:    std::ifstream fin(filename);
+        1:   81-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   82:    string line;
+        1:   82-block  0
+call    0 returned 1
+        1:   83:    while(getline(fin, line)){
+        1:   83-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   83-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   83-block  2
+branch  6 taken 0
+branch  7 taken 1 (fallthrough)
+    #####:   84:        stringstream ss(line);
+    %%%%%:   84-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+        -:   85:        int id, pret;
+    #####:   86:        string denumire, destinatie, tip;
+    %%%%%:   86-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:   87:        ss >> id;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   88:        ss >> denumire;
+    %%%%%:   88-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   89:        ss >> destinatie;
+    %%%%%:   89-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   90:        ss >> tip;
+    %%%%%:   90-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   91:        ss >> pret;
+    %%%%%:   91-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   92:        Repo::store_oferta(Oferta(id, denumire, destinatie, tip, pret));
+    %%%%%:   92-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   92-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   92-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   92-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    %%%%%:   92-block  4
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    %%%%%:   92-block  5
+call   15 never executed
+call   16 never executed
+call   17 never executed
+call   18 never executed
+    $$$$$:   92-block  6
+call   19 never executed
+    $$$$$:   92-block  7
+    $$$$$:   92-block  8
+call   20 never executed
+    $$$$$:   92-block  9
+    $$$$$:   92-block 10
+call   21 never executed
+    $$$$$:   92-block 11
+    $$$$$:   92-block 12
+call   22 never executed
+    $$$$$:   92-block 13
+    #####:   93:    }
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+    $$$$$:   93-block  0
+call    4 never executed
+    $$$$$:   93-block  1
+call    5 never executed
+    $$$$$:   93-block  2
+call    6 never executed
+    $$$$$:   93-block  3
+call    7 never executed
+        -:   94:
+        1:   95:    fin.close();
+        1:   95-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   96:}
+        1:   96-block  0
+call    0 returned 1
+call    1 returned 1
+    $$$$$:   96-block  1
+call    2 never executed
+    $$$$$:   96-block  2
+call    3 never executed
+        -:   97:
+function _ZN10RepoFisier12load_to_fileEv called 4 returned 100% blocks executed 71%
+        4:   98:void RepoFisier::load_to_file() {
+        4:   99:    std::ofstream fout(filename);
+        4:   99-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  100:
+        6:  101:    for(const auto&o : get_all()){
+        4:  101-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:  101-block  1
+call    3 returned 4
+call    4 returned 4
+        2:  101-block  2
+call    5 returned 2
+        6:  101-block  3
+call    6 returned 6
+branch  7 taken 2
+branch  8 taken 4 (fallthrough)
+        2:  102:        fout <<  o.get_id() <<  " " << o.get_denumire() << " " << o.get_destinatie() << " " << o.get_tip() << " " << o.get_pret() << "\n";
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  102-block  0
+call    3 returned 2
+branch  4 taken 2 (fallthrough)
+branch  5 taken 0 (throw)
+        2:  102-block  1
+call    6 returned 2
+branch  7 taken 2 (fallthrough)
+branch  8 taken 0 (throw)
+        2:  102-block  2
+call    9 returned 2
+branch 10 taken 2 (fallthrough)
+branch 11 taken 0 (throw)
+        2:  102-block  3
+call   12 returned 2
+branch 13 taken 2 (fallthrough)
+branch 14 taken 0 (throw)
+        2:  102-block  4
+call   15 returned 2
+branch 16 taken 2 (fallthrough)
+branch 17 taken 0 (throw)
+        2:  102-block  5
+call   18 returned 2
+branch 19 taken 2 (fallthrough)
+branch 20 taken 0 (throw)
+        2:  102-block  6
+call   21 returned 2
+branch 22 taken 2 (fallthrough)
+branch 23 taken 0 (throw)
+        2:  102-block  7
+call   24 returned 2
+branch 25 taken 2 (fallthrough)
+branch 26 taken 0 (throw)
+        2:  102-block  8
+call   27 returned 2
+branch 28 taken 2 (fallthrough)
+branch 29 taken 0 (throw)
+        2:  102-block  9
+call   30 returned 2
+branch 31 taken 2 (fallthrough)
+branch 32 taken 0 (throw)
+        2:  102-block 10
+call   33 returned 2
+branch 34 taken 2 (fallthrough)
+branch 35 taken 0 (throw)
+        2:  102-block 11
+call   36 returned 2
+branch 37 taken 2 (fallthrough)
+branch 38 taken 0 (throw)
+        2:  102-block 12
+call   39 returned 2
+branch 40 taken 2 (fallthrough)
+branch 41 taken 0 (throw)
+        2:  102-block 13
+call   42 returned 2
+branch 43 taken 2 (fallthrough)
+branch 44 taken 0 (throw)
+        2:  102-block 14
+call   45 returned 2
+call   46 returned 2
+call   47 returned 2
+call   48 returned 2
+    $$$$$:  102-block 15
+call   49 never executed
+    $$$$$:  102-block 16
+    $$$$$:  102-block 17
+call   50 never executed
+    $$$$$:  102-block 18
+    $$$$$:  102-block 19
+call   51 never executed
+    $$$$$:  102-block 20
+        -:  103:    }
+        -:  104:
+        4:  105:    fout.close();
+        4:  105-block  0
+call    0 returned 4
+branch  1 taken 4 (fallthrough)
+branch  2 taken 0 (throw)
+        4:  106:}
+        4:  106-block  0
+call    0 returned 4
+    $$$$$:  106-block  1
+call    1 never executed
+        -:  107:
+function _ZN7RepoLab12store_ofertaERK6Oferta called 11 returned 82% blocks executed 71%
+       11:  108:void RepoLab::store_oferta(const Oferta &of) {
+       11:  109:    double prob = probabiliate_random();
+       11:  109-block  0
+call    0 returned 11
+       11:  110:    if(prob > probabilitate) {
+branch  0 taken 10 (fallthrough)
+branch  1 taken 1
+       14:  111:        for (auto &it: oferte) {
+       10:  111-block  0
+call    0 returned 10
+call    1 returned 10
+        5:  111-block  1
+call    2 returned 5
+        4:  111-block  2
+call    3 returned 4
+       14:  111-block  3
+call    4 returned 14
+branch  5 taken 5
+branch  6 taken 9 (fallthrough)
+        5:  112:            if (it.second == of) {
+call    0 returned 5
+branch  1 taken 5 (fallthrough)
+branch  2 taken 0 (throw)
+        5:  112-block  0
+branch  3 taken 1 (fallthrough)
+branch  4 taken 4
+        1:  113:                throw RepoException("Exista deja o oferta ce aceste date!");
+        1:  113-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  113-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  113-block  2
+call    9 never executed
+    $$$$$:  113-block  3
+    $$$$$:  113-block  4
+call   10 never executed
+        -:  114:            }
+        -:  115:        }
+        9:  116:        oferte.insert({of.get_id(), of});
+        9:  116-block  0
+call    0 returned 9
+call    1 returned 9
+branch  2 taken 9 (fallthrough)
+branch  3 taken 0 (throw)
+        9:  116-block  1
+call    4 returned 9
+branch  5 taken 9 (fallthrough)
+branch  6 taken 0 (throw)
+        9:  116-block  2
+call    7 returned 9
+    $$$$$:  116-block  3
+call    8 never executed
+    $$$$$:  116-block  4
+    $$$$$:  116-block  5
+call    9 never executed
+        -:  117:    }
+        -:  118:    else{
+        1:  119:        throw RepoException("Probabilitate prea mica!");
+        1:  119-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  119-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:  119-block  2
+call    9 never executed
+    $$$$$:  119-block  3
+    $$$$$:  119-block  4
+call   10 never executed
+        -:  120:    }
+        9:  121:}
+        9:  121-block  0
+        -:  122:
+function _ZN7RepoLab10del_ofertaERKi called 4 returned 50% blocks executed 69%
+        4:  123:Oferta RepoLab::del_oferta(const int &id) {
+        4:  124:    double prob = probabiliate_random();
+        4:  124-block  0
+call    0 returned 4
+        4:  125:    if(prob > probabilitate) {
+branch  0 taken 3 (fallthrough)
+branch  1 taken 1
+        3:  126:        if(oferte.find(id) == oferte.end()){
+        3:  126-block  0
+call    0 returned 3
+call    1 returned 3
+branch  2 taken 3 (fallthrough)
+branch  3 taken 0 (throw)
+        3:  126-block  1
+call    4 returned 3
+branch  5 taken 1 (fallthrough)
+branch  6 taken 2
+    $$$$$:  126-block  2
+        1:  127:            throw RepoException("Nu exista o oferta cu acest id!");
+        1:  127-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  127-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  127-block  2
+call    9 never executed
+    $$$$$:  127-block  3
+    $$$$$:  127-block  4
+call   10 never executed
+        -:  128:        }
+        2:  129:        Oferta aux = oferte.find(id)->second;
+        2:  129-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  129-block  1
+call    3 returned 2
+call    4 returned 2
+branch  5 taken 2 (fallthrough)
+branch  6 taken 0 (throw)
+    $$$$$:  129-block  2
+        2:  130:        oferte.erase(id);
+        2:  130-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        4:  131:        return aux;
+        2:  131-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  131-block  1
+        2:  132:    }
+        2:  132-block  0
+call    0 returned 2
+    $$$$$:  132-block  1
+call    1 never executed
+        -:  133:    else{
+        1:  134:        throw RepoException("Probabilitate prea mica!");
+        1:  134-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  134-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:  134-block  2
+call    9 never executed
+    $$$$$:  134-block  3
+    $$$$$:  134-block  4
+call   10 never executed
+        -:  135:    }
+        -:  136:}
+        -:  137:
+function _ZN7RepoLab17modificare_ofertaERKiRK6Oferta called 3 returned 33% blocks executed 70%
+        3:  138:Oferta RepoLab::modificare_oferta(const int &id, const Oferta &new_of) {
+        3:  139:    double prob = probabiliate_random();
+        3:  139-block  0
+call    0 returned 3
+        3:  140:    if(prob > probabilitate) {
+branch  0 taken 2 (fallthrough)
+branch  1 taken 1
+        2:  141:        auto it = oferte.find(id);
+        2:  141-block  0
+call    0 returned 2
+branch  1 taken 2 (fallthrough)
+branch  2 taken 0 (throw)
+        2:  142:        if(it == oferte.end()){
+        2:  142-block  0
+call    0 returned 2
+call    1 returned 2
+branch  2 taken 1 (fallthrough)
+branch  3 taken 1
+        1:  143:            throw RepoException("Nu exista o oferta cu acest id!");
+        1:  143-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  143-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 1
+    $$$$$:  143-block  2
+call    9 never executed
+    $$$$$:  143-block  3
+    $$$$$:  143-block  4
+call   10 never executed
+        -:  144:        }
+        1:  145:        Oferta aux = it->second;
+        1:  145-block  0
+call    0 returned 1
+call    1 returned 1
+branch  2 taken 1 (fallthrough)
+branch  3 taken 0 (throw)
+        1:  146:        oferte.erase(it);
+        1:  146-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  147:        oferte.insert({id, new_of});
+        1:  147-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  147-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:  147-block  2
+call    6 returned 1
+    $$$$$:  147-block  3
+call    7 never executed
+    $$$$$:  147-block  4
+        2:  148:        return aux;
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:  148-block  0
+        1:  149:    }
+        1:  149-block  0
+call    0 returned 1
+    $$$$$:  149-block  1
+call    1 never executed
+        -:  150:    else{
+        1:  151:        throw RepoException("Probabilitate prea mica!");
+        1:  151-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  151-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:  151-block  2
+call    9 never executed
+    $$$$$:  151-block  3
+    $$$$$:  151-block  4
+call   10 never executed
+        -:  152:    }
+        -:  153:}
+        -:  154:
+function _ZN7RepoLab7get_allEv called 16 returned 94% blocks executed 80%
+       16:  155:vector<Oferta>& RepoLab::get_all() {
+       16:  156:    double prob = probabiliate_random();
+       16:  156-block  0
+call    0 returned 16
+       16:  157:    if(prob > probabilitate) {
+branch  0 taken 15 (fallthrough)
+branch  1 taken 1
+       15:  158:        toate_ofertele.clear();
+       15:  158-block  0
+call    0 returned 15
+       31:  159:        for(const auto & it: oferte){
+call    0 returned 15
+call    1 returned 15
+       16:  159-block  0
+call    2 returned 16
+       16:  159-block  1
+call    3 returned 16
+       31:  159-block  2
+call    4 returned 31
+branch  5 taken 16
+branch  6 taken 15 (fallthrough)
+       16:  160:            toate_ofertele.push_back(it.second);
+call    0 returned 16
+branch  1 taken 16 (fallthrough)
+branch  2 taken 0 (throw)
+        -:  161:        }
+       15:  162:        return toate_ofertele;
+       15:  162-block  0
+       15:  162-block  1
+        -:  163:    }
+        -:  164:    else{
+        1:  165:        throw RepoException("Probabilitate prea mica!");
+        1:  165-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  165-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:  165-block  2
+call    9 never executed
+    $$$$$:  165-block  3
+    $$$$$:  165-block  4
+call   10 never executed
+        -:  166:    }
+        -:  167:}
+        -:  168:
+function _ZN7RepoLab16del_all_elementsEv called 2 returned 50% blocks executed 75%
+        2:  169:void RepoLab::del_all_elements() {
+        2:  170:    double prob = probabiliate_random();
+        2:  170-block  0
+call    0 returned 2
+        2:  171:    if(prob > probabilitate) {
+branch  0 taken 1 (fallthrough)
+branch  1 taken 1
+        1:  172:        oferte.clear();
+        1:  172-block  0
+call    0 returned 1
+        -:  173:    }
+        -:  174:    else{
+        1:  175:        throw RepoException("Probabilitate prea mica!");
+        1:  175-block  0
+call    0 returned 1
+call    1 returned 1
+call    2 returned 1
+branch  3 taken 1 (fallthrough)
+branch  4 taken 0 (throw)
+        1:  175-block  1
+call    5 returned 1
+call    6 returned 1
+call    7 returned 1
+call    8 returned 0
+    $$$$$:  175-block  2
+call    9 never executed
+    $$$$$:  175-block  3
+    $$$$$:  175-block  4
+call   10 never executed
+        -:  176:    }
+        1:  177:}
+        -:  178:
+        -:  179:

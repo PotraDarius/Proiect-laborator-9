@@ -1,0 +1,134 @@
+\hypertarget{classRepo}{}\doxysection{Repo Class Reference}
+\label{classRepo}\index{Repo@{Repo}}
+
+
+{\ttfamily \#include $<$repository.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRepo_a31de22cfa8d37a4967d9248d231ac703}{Repo}} ()=default
+\item 
+void \mbox{\hyperlink{classRepo_a61bd9e9d832b4348f1f1db6a97e7e19a}{store\+\_\+oferta}} (const \mbox{\hyperlink{classOferta}{Oferta}} \&of)
+\item 
+void \mbox{\hyperlink{classRepo_a3922bf1fade9ba5246597db437cbdfa0}{del\+\_\+oferta}} (const int \&id)
+\item 
+void \mbox{\hyperlink{classRepo_a92029082df99bb80cb1d568238e7245b}{modificare\+\_\+oferta}} (const int \&id, const \mbox{\hyperlink{classOferta}{Oferta}} \&new\+\_\+of)
+\item 
+void \mbox{\hyperlink{classRepo_af5ab95aec98340bb78852d7c37d7a822}{store\+\_\+wishlist}} (const \mbox{\hyperlink{classOferta}{Oferta}} \&of)
+\item 
+vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ \& \mbox{\hyperlink{classRepo_ae4dd6651796d2ddba7bb861bf487a5d4}{get\+\_\+all}} ()
+\item 
+void \mbox{\hyperlink{classRepo_a0f5607a2835e46e8926fd7e950e1ce98}{del\+\_\+all\+\_\+elements}} ()
+\item 
+\mbox{\hyperlink{classRepo_a3023089f79e376db00fd6c8baeed15ac}{$\sim$\+Repo}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRepo_a31de22cfa8d37a4967d9248d231ac703}\label{classRepo_a31de22cfa8d37a4967d9248d231ac703}} 
+\index{Repo@{Repo}!Repo@{Repo}}
+\index{Repo@{Repo}!Repo@{Repo}}
+\doxysubsubsection{\texorpdfstring{Repo()}{Repo()}}
+{\footnotesize\ttfamily Repo\+::\+Repo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classRepo_a3023089f79e376db00fd6c8baeed15ac}\label{classRepo_a3023089f79e376db00fd6c8baeed15ac}} 
+\index{Repo@{Repo}!````~Repo@{$\sim$Repo}}
+\index{````~Repo@{$\sim$Repo}!Repo@{Repo}}
+\doxysubsubsection{\texorpdfstring{$\sim$Repo()}{~Repo()}}
+{\footnotesize\ttfamily Repo\+::$\sim$\+Repo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRepo_a0f5607a2835e46e8926fd7e950e1ce98}\label{classRepo_a0f5607a2835e46e8926fd7e950e1ce98}} 
+\index{Repo@{Repo}!del\_all\_elements@{del\_all\_elements}}
+\index{del\_all\_elements@{del\_all\_elements}!Repo@{Repo}}
+\doxysubsubsection{\texorpdfstring{del\_all\_elements()}{del\_all\_elements()}}
+{\footnotesize\ttfamily void Repo\+::del\+\_\+all\+\_\+elements (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Sterge toate elementele din lista de oferte Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRepo_a0f5607a2835e46e8926fd7e950e1ce98_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classRepo_a3922bf1fade9ba5246597db437cbdfa0}\label{classRepo_a3922bf1fade9ba5246597db437cbdfa0}} 
+\index{Repo@{Repo}!del\_oferta@{del\_oferta}}
+\index{del\_oferta@{del\_oferta}!Repo@{Repo}}
+\doxysubsubsection{\texorpdfstring{del\_oferta()}{del\_oferta()}}
+{\footnotesize\ttfamily void Repo\+::del\+\_\+oferta (\begin{DoxyParamCaption}\item[{const int \&}]{id }\end{DoxyParamCaption})}
+
+Sterge o oferta din lista de oferte id -\/ int @raise \mbox{\hyperlink{classRepoException}{Repo\+Exception}} -\/ nu exista oferta cu id-\/ul dat Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRepo_a3922bf1fade9ba5246597db437cbdfa0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classRepo_ae4dd6651796d2ddba7bb861bf487a5d4}\label{classRepo_ae4dd6651796d2ddba7bb861bf487a5d4}} 
+\index{Repo@{Repo}!get\_all@{get\_all}}
+\index{get\_all@{get\_all}!Repo@{Repo}}
+\doxysubsubsection{\texorpdfstring{get\_all()}{get\_all()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classOferta}{Oferta}} $>$ \& Repo\+::get\+\_\+all (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returneaza toate ofertele \begin{DoxyReturn}{Returns}
+vector$<$\+Oferta$>$ 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRepo_ae4dd6651796d2ddba7bb861bf487a5d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classRepo_a92029082df99bb80cb1d568238e7245b}\label{classRepo_a92029082df99bb80cb1d568238e7245b}} 
+\index{Repo@{Repo}!modificare\_oferta@{modificare\_oferta}}
+\index{modificare\_oferta@{modificare\_oferta}!Repo@{Repo}}
+\doxysubsubsection{\texorpdfstring{modificare\_oferta()}{modificare\_oferta()}}
+{\footnotesize\ttfamily void Repo\+::modificare\+\_\+oferta (\begin{DoxyParamCaption}\item[{const int \&}]{id,  }\item[{const \mbox{\hyperlink{classOferta}{Oferta}} \&}]{new\+\_\+of }\end{DoxyParamCaption})}
+
+Modifica o oferta din lista de oferte id -\/ int new\+\_\+of -\/ \mbox{\hyperlink{classOferta}{Oferta}} @raise Repoexception -\/ nu exista oferta cu id-\/ul dat @raise \mbox{\hyperlink{classValidatorException}{Validator\+Exception}} -\/ new\+\_\+of nu este valid Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRepo_a92029082df99bb80cb1d568238e7245b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classRepo_a61bd9e9d832b4348f1f1db6a97e7e19a}\label{classRepo_a61bd9e9d832b4348f1f1db6a97e7e19a}} 
+\index{Repo@{Repo}!store\_oferta@{store\_oferta}}
+\index{store\_oferta@{store\_oferta}!Repo@{Repo}}
+\doxysubsubsection{\texorpdfstring{store\_oferta()}{store\_oferta()}}
+{\footnotesize\ttfamily void Repo\+::store\+\_\+oferta (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classOferta}{Oferta}} \&}]{of }\end{DoxyParamCaption})}
+
+Adauga o oferta in lista de oferte of -\/ \mbox{\hyperlink{classOferta}{Oferta}} @raise \mbox{\hyperlink{classRepoException}{Repo\+Exception}} -\/ exista deja oferta data Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRepo_a61bd9e9d832b4348f1f1db6a97e7e19a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classRepo_af5ab95aec98340bb78852d7c37d7a822}\label{classRepo_af5ab95aec98340bb78852d7c37d7a822}} 
+\index{Repo@{Repo}!store\_wishlist@{store\_wishlist}}
+\index{store\_wishlist@{store\_wishlist}!Repo@{Repo}}
+\doxysubsubsection{\texorpdfstring{store\_wishlist()}{store\_wishlist()}}
+{\footnotesize\ttfamily void Repo\+::store\+\_\+wishlist (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classOferta}{Oferta}} \&}]{of }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRepo_af5ab95aec98340bb78852d7c37d7a822_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{repository_8h}{repository.\+h}}\item 
+\mbox{\hyperlink{repository_8cpp}{repository.\+cpp}}\end{DoxyCompactItemize}

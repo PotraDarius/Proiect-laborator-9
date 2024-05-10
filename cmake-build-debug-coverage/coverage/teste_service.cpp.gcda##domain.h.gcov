@@ -1,0 +1,134 @@
+        -:    0:Source:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/domain.h
+        -:    0:Graph:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/teste_service.cpp.gcno
+        -:    0:Data:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/teste_service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include <string>
+        -:    3:
+        -:    4:using std::string;
+        -:    5:
+        -:    6:class Oferta{
+        -:    7:private:
+        -:    8:    int id;
+        -:    9:    string denumire;
+        -:   10:    string destinatie;
+        -:   11:    string tip;
+        -:   12:    int pret;
+        -:   13:
+        -:   14:public:
+        -:   15:    Oferta() = default;
+        -:   16:
+        -:   17:    /**
+        -:   18:     * Constructor pentru clasa Oferta
+        -:   19:     * id - int
+        -:   20:     * denumire - string
+        -:   21:     * destinatie - string
+        -:   22:     * tip - string
+        -:   23:     * pret - int
+        -:   24:     */
+        -:   25:    Oferta(int id, string denumire, string destinatie, string tip, int pret);
+        -:   26:
+        -:   27:    //Oferta(const Oferta& ot);
+        -:   28:
+        -:   29:    /**
+        -:   30:     * Getter pentru tip
+        -:   31:     * @return string
+        -:   32:     */
+        -:   33:    [[nodiscard]]string  get_tip() const;
+        -:   34:
+        -:   35:    /**
+        -:   36:     * Getter pentru destinatie
+        -:   37:     * @return string
+        -:   38:     */
+        -:   39:    [[nodiscard]] string get_destinatie() const;
+        -:   40:
+        -:   41:    /**
+        -:   42:     * Getter pentru denumire
+        -:   43:     * @return string
+        -:   44:     */
+        -:   45:    [[nodiscard]] string get_denumire() const;
+        -:   46:
+        -:   47:    /**
+        -:   48:     * Getter pentru pret
+        -:   49:     * @return int
+        -:   50:     */
+        -:   51:    [[nodiscard]]int get_pret() const;
+        -:   52:
+        -:   53:    /**
+        -:   54:     * Getter pentru id
+        -:   55:     * @return int
+        -:   56:     */
+        -:   57:    [[nodiscard]]int get_id() const;
+        -:   58:
+        -:   59:    /**
+        -:   60:     * Setter pentru denumire
+        -:   61:     * denumire - string
+        -:   62:     */
+        -:   63:    void set_denumire(string denumire);
+        -:   64:
+        -:   65:    /**
+        -:   66:     * Setter pentru destinatie
+        -:   67:     * destinatie - string
+        -:   68:     */
+        -:   69:    void set_destinatie(string destinatie);
+        -:   70:
+        -:   71:    /**
+        -:   72:     * Setter pentru tip
+        -:   73:     * tip - string
+        -:   74:     */
+        -:   75:    void set_tip(string tip);
+        -:   76:
+        -:   77:    /**
+        -:   78:     * Setter pentru pret
+        -:   79:     * pret - int
+        -:   80:     */
+        -:   81:    void set_pret(int pret);
+        -:   82:
+        -:   83:    /**
+        -:   84:     * Operator de egalitate
+        -:   85:     * ot - Oferta
+        -:   86:     * @return bool
+        -:   87:     */
+        -:   88:    bool operator==(const Oferta& ot) const;
+        -:   89:
+        -:   90:    /**
+        -:   91:     * Operator de atribuire
+        -:   92:     * ot - Oferta
+        -:   93:     */
+        -:   94:    void operator=(const Oferta& ot);
+        -:   95:
+function _ZN6OfertaD2Ev called 0 returned 0% blocks executed 0%
+    #####:   96:    ~Oferta() = default;
+    %%%%%:   96-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+        -:   97:
+        -:   98:};
+        -:   99:
+        -:  100:/*
+        -:  101: * Functii de comparare pentru sortare
+        -:  102:
+        -:  103: */
+        -:  104:
+        -:  105:/**
+        -:  106: * Functie de comparare pentru sortare dupa denumire
+        -:  107: * of1 - Oferta
+        -:  108: * of2 - Oferta
+        -:  109: */
+        -:  110:bool compara_denumire(const Oferta& of1, const Oferta& of2);
+        -:  111:
+        -:  112:/**
+        -:  113: * Functie de comparare pentru sortare dupa destinatie
+        -:  114: * of1 - Oferta
+        -:  115: * of2 - Oferta
+        -:  116: */
+        -:  117:bool compara_destinatie(const Oferta& of1, const Oferta& of2);
+        -:  118:
+        -:  119:/**
+        -:  120: * Functie de comparare pentru sortare dupa tip si pret
+        -:  121: * of1 - Oferta
+        -:  122: * of2 - Oferta
+        -:  123: */
+        -:  124:bool compara_tip_si_pret(const Oferta& of1, const Oferta& of2);
+        -:  125:

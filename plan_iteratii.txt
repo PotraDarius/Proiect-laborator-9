@@ -1,0 +1,12 @@
+Iteratia 1:
+ - adaugarea unui element in lista
+ - stergerea unui element din lista
+ - afisarea listei
+ - modificarea unui element din lista
+ - filtrarea elementelor din lista dupa un criteriu dat
+
+Iteratia 2:
+ - cautarea unui element in lista
+ - sortarea listei dupa un criteriu dat
+
+

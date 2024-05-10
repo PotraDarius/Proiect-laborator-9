@@ -1,0 +1,19 @@
+#pragma once
+
+void teste_service();
+void test_add_oferta();
+void test_delete_oferta();
+void test_update_oferta();
+void test_get_all_service();
+void test_filtrare_oferte_dupa_destinatie();
+void test_filtrare_oferte_dupa_pret();
+void test_sortare_dupa_denumire();
+void test_sortare_dupa_destinatie();
+void test_sortate_dupa_tip_si_pret();
+void test_add_wishlist_dupa_denumire();
+void test_sterge_wishlist();
+void test_cauta_dupa_destinatie();
+void test_export();
+void test_generare_random();
+void test_generare_raport();
+void test_undo();

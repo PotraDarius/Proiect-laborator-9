@@ -1,0 +1,159 @@
+        -:    0:Source:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/repository.h
+        -:    0:Graph:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/teste_service.cpp.gcno
+        -:    0:Data:/mnt/c/Users/chich/OneDrive/Desktop/An I Sem II/Programare Orientata Obiect/tema_lab_8-9/cmake-build-debug-coverage/CMakeFiles/tema_lab_5_6.dir/teste_service.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#pragma once
+        -:    2:#include "domain.h"
+        -:    3:#include <utility>
+        -:    4:#include <vector>
+        -:    5:#include <unordered_map>
+        -:    6:#include <algorithm>
+        -:    7:#include <cstdlib>
+        -:    8:#include "vector_dinamic.h"
+        -:    9:
+        -:   10:using std::vector;
+        -:   11:using std::unordered_map;
+        -:   12:
+        -:   13:class RepoException: public std::exception{
+        -:   14:private:
+        -:   15:    string msg;
+        -:   16:public:
+        -:   17:    explicit RepoException(string msg): msg{std::move(msg)}{}
+        -:   18:    [[nodiscard]] string get_msg() const{
+        -:   19:        return this->msg;
+        -:   20:    }
+        -:   21:};
+        -:   22:
+        -:   23:class RepoGeneric{
+        -:   24:public:
+        -:   25:    /**
+        -:   26:     * Adauga o oferta in lista de oferte
+        -:   27:     * of - Oferta
+        -:   28:     * @raise RepoException - exista deja oferta data
+        -:   29:     */
+        -:   30:    virtual void store_oferta(const Oferta & of) = 0;
+        -:   31:
+        -:   32:    /**
+        -:   33:     * Sterge o oferta din lista de oferte
+        -:   34:     * id - int
+        -:   35:     * @raise RepoException - nu exista oferta cu id-ul dat
+        -:   36:     */
+        -:   37:    virtual Oferta del_oferta(const int & id) = 0;
+        -:   38:
+        -:   39:    /**
+        -:   40:     * Modifica o oferta din lista de oferte
+        -:   41:     * id - int
+        -:   42:     * new_of - Oferta
+        -:   43:     * @raise Repoexception - nu exista oferta cu id-ul dat
+        -:   44:     * @raise ValidatorException - new_of nu este valid
+        -:   45:     */
+        -:   46:    virtual Oferta modificare_oferta(const int& id, const Oferta& new_of) = 0;
+        -:   47:
+        -:   48:    /**
+        -:   49:     * Returneaza toate ofertele
+        -:   50:     * @return vector<Oferta>
+        -:   51:     */
+        -:   52:    virtual void del_all_elements() = 0;
+        -:   53:
+        -:   54:    /**
+        -:   55:     * Sterge toate elementele din lista de oferte
+        -:   56:     */
+        -:   57:    virtual vector<Oferta>& get_all() = 0;
+        -:   58:};
+        -:   59:
+        -:   60:
+        -:   61:class Repo: public RepoGeneric{
+        -:   62:
+        -:   63:private:
+        -:   64:    vector<Oferta> oferte;
+        -:   65:public:
+function _ZN4RepoC2Ev called 0 returned 0% blocks executed 0%
+    #####:   66:    Repo() = default;
+    %%%%%:   66-block  0
+call    0 never executed
+call    1 never executed
+        -:   67:
+        -:   68:
+        -:   69:    void store_oferta(const Oferta& of) override;
+        -:   70:
+        -:   71:
+        -:   72:    Oferta del_oferta(const int& id) override;
+        -:   73:
+        -:   74:
+        -:   75:    Oferta modificare_oferta(const int& id, const Oferta& new_of) override;
+        -:   76:
+        -:   77:
+        -:   78:
+        -:   79:    [[nodiscard]]vector<Oferta>& get_all() override;
+        -:   80:
+        -:   81:
+        -:   82:     void del_all_elements() override;
+        -:   83:
+function _ZN4RepoD2Ev called 0 returned 0% blocks executed 0%
+    #####:   84:    ~Repo() = default;
+    %%%%%:   84-block  0
+call    0 never executed
+        -:   85:
+        -:   86:};
+        -:   87:
+        -:   88:class RepoWishlist: public Repo{
+        -:   89:private:
+        -:   90:    vector<Oferta> oferte;
+        -:   91:public:
+        -:   92:    void store_oferta(const Oferta & of) override;
+        -:   93:    void del_all_elements() override;
+        -:   94:    vector<Oferta>& get_all() override;
+        -:   95:};
+        -:   96:
+        -:   97:class RepoFisier: public Repo{
+        -:   98:private:
+        -:   99:    void load_to_file();
+        -:  100:    void load_from_file();
+        -:  101:    string filename;
+        -:  102:public:
+        -:  103:    explicit RepoFisier(string filename): Repo(),  filename{std::move(filename)}{
+        -:  104:        load_from_file();
+        -:  105:    }
+        -:  106:
+        -:  107:    void store_oferta(const Oferta & of) override{
+        -:  108:        Repo::store_oferta(of);
+        -:  109:        load_to_file();
+        -:  110:    }
+        -:  111:
+        -:  112:    Oferta del_oferta(const int & id) override{
+        -:  113:        Oferta aux = Repo::del_oferta(id);
+        -:  114:        load_to_file();
+        -:  115:        return aux;
+        -:  116:    }
+        -:  117:
+        -:  118:    Oferta modificare_oferta(const int& id, const Oferta& new_of) override{
+        -:  119:        Oferta aux = Repo::modificare_oferta(id, new_of);
+        -:  120:        load_to_file();
+        -:  121:        return aux;
+        -:  122:    }
+        -:  123:
+        -:  124:    void del_all_elements() override{
+        -:  125:        Repo::del_all_elements();
+        -:  126:        load_to_file();
+        -:  127:    }
+        -:  128:
+        -:  129:};
+        -:  130:
+        -:  131:
+        -:  132:class RepoLab: public RepoGeneric{
+        -:  133:private:
+        -:  134:    unordered_map<int, Oferta> oferte;
+        -:  135:    vector<Oferta> toate_ofertele;
+        -:  136:    double probabilitate;
+        -:  137:    static double probabiliate_random(){
+        -:  138:        return static_cast<double >(rand()) / RAND_MAX * 100;
+        -:  139:    }
+        -:  140:public:
+        -:  141:    explicit RepoLab(double probabilitate): probabilitate{probabilitate}{};
+        -:  142:    void store_oferta(const Oferta &of) override;
+        -:  143:    Oferta del_oferta(const int &id) override;
+        -:  144:    Oferta modificare_oferta(const int & id, const Oferta & new_of) override;
+        -:  145:    vector<Oferta>& get_all() override;
+        -:  146:    void del_all_elements() override;
+        -:  147:};
+        -:  148:
